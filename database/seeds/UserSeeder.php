@@ -14,8 +14,8 @@ class UserSeeder extends Seeder
     public function run()
     {
         User::create([
-            'nombre' => "Diego Alonso",
-            'apellido' => "Ojeda Medina",
+            'nombre' => "Administrador",
+            'apellido' => "Senasoft",
             'genero' => "Masculino",
             'rh' => "O+",
             'fecha_nacimiento' => "1989-09-03",
