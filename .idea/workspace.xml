@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4434b9b-6076-4e45-8ffb-b6e525890c55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Enums/Rol.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/TipoDocumento.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_214222_create_sucursal_bodega_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_160001_create_municipio_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_160001_create_municipio_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_162805_create_empresa_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_162805_create_empresa_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_164315_create_sucursal_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_164315_create_sucursal_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/MER.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/database/MER.mwb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +183,7 @@
       <updated>1602687405099</updated>
       <workItem from="1602687406455" duration="2090000" />
       <workItem from="1602690114481" duration="3115000" />
-      <workItem from="1602699783412" duration="7941000" />
+      <workItem from="1602699783412" duration="12634000" />
     </task>
     <task id="LOCAL-00001" summary="* Primer Commit con estructura del proyecto de laravel">
       <created>1602687554039</created>
@@ -203,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602703151689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums">
+      <created>1602707795388</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602707795388</updated>
+    </task>
+    <task id="LOCAL-00004" summary="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums&#10;* Migracion de usuario y bodega">
+      <created>1602710662235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602710662236</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,17 +225,19 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="* Primer Commit con estructura del proyecto de laravel" />
     <MESSAGE value="* Migracion de Departamentos" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Migracion de Departamentos" />
+    <MESSAGE value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums" />
+    <MESSAGE value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums&#10;* Migracion de usuario y bodega" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums&#10;* Migracion de usuario y bodega" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602702184071">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602702184071" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602703150843">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602710661390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602703150843" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602710661390" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602699799049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -238,14 +250,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="483" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602702045224" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602703153048">
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602710706442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602703153048" />
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602705224254">
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602710706442" />
+    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602710438854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602705224254" />
+    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602710438854" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602687605205">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
