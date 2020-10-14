@@ -10,6 +10,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function adminlte_image()
+    {
+        return 'https://picsum.photos/300/300';
+    }
+
     /**
      * The attributes that are mass assignable.
      *
