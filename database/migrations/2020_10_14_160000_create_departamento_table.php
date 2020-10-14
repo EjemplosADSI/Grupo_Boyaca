@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\BasicStatus;
+use App\Enums\DepartamentoRegion;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,12 +17,11 @@ class CreateDepartamentoTable extends Migration
     {
         Schema::create('departamento', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('region'); //tipo enum
-            $table->string('estado'); //tipo enum
-            $table->timestamps(); //Definición de campos created_at, updated_at (faltante deleted_at)
-
-
+            $table->string('nombre', 90)->unique()->index();
+            $table->enum('region', DepartamentoRegion::getValues());
+            $table->enum('estado', BasicStatus::getValues())->default(BasicStatus::Activo);
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

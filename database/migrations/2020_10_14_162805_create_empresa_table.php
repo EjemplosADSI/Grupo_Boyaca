@@ -13,18 +13,29 @@ class CreateEmpresaTable extends Migration
      */
     public function up()
     {
-        Schema::create('empresa', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre');
-            $table->integer('NIT');
-            $table->integer('municipio_id'); //llave foranea
-            $table->string('direccion');
-            $table->integer('telefono');
-            $table->string('correoElectronico');
-            $table->string('logo');
-            $table->string('logo'); //tipo enum
-            $table->timestamps(); //Definición de campos created_at, updated_at (faltante deleted_at)
+        Schema::create('empresas', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nombre', 45);
+            $table->bigInteger('nit');
+            $table->bigInteger('municipio_id');
+            $table->string('direccion', 60);
+            $table->bigInteger('telefono');
+            $table->string('correoElectronico', 255);
+            $table->string('logo', 80);
+            $table->enum('estado', ['Activo', 'Inactivo']);
+            # Indexes
+            $table->unique('id');
+            $table->unique('nit');
+            $table->unique('correoElectronico');
+            $table->index('municipio_id');
+            $table->softDeletes();
+            $table->timestamps();
 
+
+            $table->foreign('municipio_id', 'fk_empresas_municipio1_idx')
+                ->references('id')->on('municipio')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 
