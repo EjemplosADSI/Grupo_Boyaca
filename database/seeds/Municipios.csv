@@ -1,0 +1,1124 @@
+id,nombre,departamento_id,acortado,estado
+5001,Medellín,5,,Activo
+5002,Abejorral,5,,Activo
+5004,Abriaquí,5,,Activo
+5021,Alejandría,5,,Activo
+5030,Amagá,5,,Activo
+5031,Amalfi,5,,Activo
+5034,Andes,5,,Activo
+5036,Angelópolis,5,,Activo
+5038,Angostura,5,,Activo
+5040,Anorí,5,,Activo
+5042,Santafé de Antioquia,5,,Activo
+5044,Anza,5,,Activo
+5045,Apartadó,5,,Activo
+5051,Arboletes,5,,Activo
+5055,Argelia,5,,Activo
+5059,Armenia,5,,Activo
+5079,Barbosa,5,,Activo
+5086,Belmira,5,,Activo
+5088,Bello,5,,Activo
+5091,Betania,5,,Activo
+5093,Betulia,5,,Activo
+5101,Ciudad Bolívar,5,,Activo
+5107,Briceño,5,,Activo
+5113,Buriticá,5,,Activo
+5120,Cáceres,5,,Activo
+5125,Caicedo,5,,Activo
+5129,Caldas,5,,Activo
+5134,Campamento,5,,Activo
+5138,Cañasgordas,5,,Activo
+5142,Caracolí,5,,Activo
+5145,Caramanta,5,,Activo
+5147,Carepa,5,,Activo
+5148,El Carmen de Viboral,5,,Activo
+5150,Carolina,5,,Activo
+5154,Caucasia,5,,Activo
+5172,Chigorodó,5,,Activo
+5190,Cisneros,5,,Activo
+5197,Cocorná,5,,Activo
+5206,Concepción,5,,Activo
+5209,Concordia,5,,Activo
+5212,Copacabana,5,,Activo
+5234,Dabeiba,5,,Activo
+5237,Don Matías,5,,Activo
+5240,Ebéjico,5,,Activo
+5250,El Bagre,5,,Activo
+5264,Entrerrios,5,,Activo
+5266,Envigado,5,,Activo
+5282,Fredonia,5,,Activo
+5284,Frontino,5,,Activo
+5306,Giraldo,5,,Activo
+5308,Girardota,5,,Activo
+5310,Gómez Plata,5,,Activo
+5313,Granada,5,,Activo
+5315,Guadalupe,5,,Activo
+5318,Guarne,5,,Activo
+5321,Guatapé,5,,Activo
+5347,Heliconia,5,,Activo
+5353,Hispania,5,,Activo
+5360,Itagui,5,,Activo
+5361,Ituango,5,,Activo
+5364,Jardín,5,,Activo
+5368,Jericó,5,,Activo
+5376,La Ceja,5,,Activo
+5380,La Estrella,5,,Activo
+5390,La Pintada,5,,Activo
+5400,La Unión,5,,Activo
+5411,Liborina,5,,Activo
+5425,Maceo,5,,Activo
+5440,Marinilla,5,,Activo
+5467,Montebello,5,,Activo
+5475,Murindó,5,,Activo
+5480,Mutatá,5,,Activo
+5483,Nariño,5,,Activo
+5490,Necoclí,5,,Activo
+5495,Nechí,5,,Activo
+5501,Olaya,5,,Activo
+5541,Peñol,5,,Activo
+5543,Peque,5,,Activo
+5576,Pueblorrico,5,,Activo
+5579,Puerto Berrío,5,,Activo
+5585,Puerto Nare,5,,Activo
+5591,Puerto Triunfo,5,,Activo
+5604,Remedios,5,,Activo
+5607,Retiro,5,,Activo
+5615,Rionegro,5,,Activo
+5628,Sabanalarga,5,,Activo
+5631,Sabaneta,5,,Activo
+5642,Salgar,5,,Activo
+5647,San Andrés de Cuerquía,5,,Activo
+5649,San Carlos,5,,Activo
+5652,San Francisco,5,,Activo
+5656,San Jerónimo,5,,Activo
+5658,San José de La Montaña,5,,Activo
+5659,San Juan de Urabá,5,,Activo
+5660,San Luis,5,,Activo
+5664,San Pedro,5,,Activo
+5665,San Pedro de Uraba,5,,Activo
+5667,San Rafael,5,,Activo
+5670,San Roque,5,,Activo
+5674,San Vicente,5,,Activo
+5679,Santa Bárbara,5,,Activo
+5686,Santa Rosa de Osos,5,,Activo
+5690,Santo Domingo,5,,Activo
+5697,El Santuario,5,,Activo
+5736,Segovia,5,,Activo
+5756,Sonsón,5,,Activo
+5761,Sopetrán,5,,Activo
+5789,Támesis,5,,Activo
+5790,Tarazá,5,,Activo
+5792,Tarso,5,,Activo
+5809,Titiribí,5,,Activo
+5819,Toledo,5,,Activo
+5837,Turbo,5,,Activo
+5842,Uramita,5,,Activo
+5847,Urrao,5,,Activo
+5854,Valdivia,5,,Activo
+5856,Valparaíso,5,,Activo
+5858,Vegachí,5,,Activo
+5861,Venecia,5,,Activo
+5873,Vigía del Fuerte,5,,Activo
+5885,Yalí,5,,Activo
+5887,Yarumal,5,,Activo
+5890,Yolombó,5,,Activo
+5893,Yondó,5,,Activo
+5895,Zaragoza,5,,Activo
+8001,Barranquilla,8,,Activo
+8078,Baranoa,8,,Activo
+8137,Campo de La Cruz,8,,Activo
+8141,Candelaria,8,,Activo
+8296,Galapa,8,,Activo
+8372,Juan de Acosta,8,,Activo
+8421,Luruaco,8,,Activo
+8433,Malambo,8,,Activo
+8436,Manatí,8,,Activo
+8520,Palmar de Varela,8,,Activo
+8549,Piojó,8,,Activo
+8558,Polonuevo,8,,Activo
+8560,Ponedera,8,,Activo
+8573,Puerto Colombia,8,,Activo
+8606,Repelón,8,,Activo
+8634,Sabanagrande,8,,Activo
+8638,Sabanalarga,8,,Activo
+8675,Santa Lucía,8,,Activo
+8685,Santo Tomás,8,,Activo
+8758,Soledad,8,,Activo
+8770,Suan,8,,Activo
+8832,Tubará,8,,Activo
+8849,Usiacurí,8,,Activo
+11001,Bogotá D.C,11,,Activo
+13001,Cartagena,13,,Activo
+13006,Achí,13,,Activo
+13030,Altos del Rosario,13,,Activo
+13042,Arenal,13,,Activo
+13052,Arjona,13,,Activo
+13062,Arroyohondo,13,,Activo
+13074,Barranco de Loba,13,,Activo
+13140,Calamar,13,,Activo
+13160,Cantagallo,13,,Activo
+13188,Cicuco,13,,Activo
+13212,Córdoba,13,,Activo
+13222,Clemencia,13,,Activo
+13244,El Carmen de Bolívar,13,,Activo
+13248,El Guamo,13,,Activo
+13268,El Peñón,13,,Activo
+13300,Hatillo de Loba,13,,Activo
+13430,Magangué,13,,Activo
+13433,Mahates,13,,Activo
+13440,Margarita,13,,Activo
+13442,María la Baja,13,,Activo
+13458,Montecristo,13,,Activo
+13468,Mompós,13,,Activo
+13473,Morales,13,,Activo
+13490,Norosí,13,,Activo
+13549,Pinillos,13,,Activo
+13580,Regidor,13,,Activo
+13600,Río Viejo,13,,Activo
+13620,San Cristóbal,13,,Activo
+13647,San Estanislao,13,,Activo
+13650,San Fernando,13,,Activo
+13654,San Jacinto,13,,Activo
+13655,San Jacinto del Cauca,13,,Activo
+13657,San Juan Nepomuceno,13,,Activo
+13667,San Martín de Loba,13,,Activo
+13670,San Pablo de Borbur,13,,Activo
+13673,Santa Catalina,13,,Activo
+13683,Santa Rosa,13,,Activo
+13688,Santa Rosa del Sur,13,,Activo
+13744,Simití,13,,Activo
+13760,Soplaviento,13,,Activo
+13780,Talaigua Nuevo,13,,Activo
+13810,Tiquisio,13,,Activo
+13836,Turbaco,13,,Activo
+13838,Turbaná,13,,Activo
+13873,Villanueva,13,,Activo
+13894,Zambrano,13,,Activo
+15001,Tunja,15,,Activo
+15022,Almeida,15,,Activo
+15047,Aquitania,15,,Activo
+15051,Arcabuco,15,,Activo
+15087,Belén,15,,Activo
+15090,Berbeo,15,,Activo
+15092,Betéitiva,15,,Activo
+15097,Boavita,15,,Activo
+15104,Boyacá,15,,Activo
+15106,Briceño,15,,Activo
+15109,Buena Vista,15,,Activo
+15114,Busbanzá,15,,Activo
+15131,Caldas,15,,Activo
+15135,Campohermoso,15,,Activo
+15162,Cerinza,15,,Activo
+15172,Chinavita,15,,Activo
+15176,Chiquinquirá,15,Chiquin/rá,Activo
+15180,Chiscas,15,,Activo
+15183,Chita,15,,Activo
+15185,Chitaraque,15,,Activo
+15187,Chivatá,15,,Activo
+15189,Ciénega,15,,Activo
+15204,Cómbita,15,,Activo
+15212,Coper,15,,Activo
+15215,Corrales,15,,Activo
+15218,Covarachía,15,,Activo
+15223,Cubará,15,,Activo
+15224,Cucaita,15,,Activo
+15226,Cuítiva,15,,Activo
+15232,Chíquiza,15,,Activo
+15236,Chivor,15,,Activo
+15238,Duitama,15,,Activo
+15244,El Cocuy,15,,Activo
+15248,El Espino,15,,Activo
+15272,Firavitoba,15,,Activo
+15276,Floresta,15,,Activo
+15293,Gachantivá,15,,Activo
+15296,Gameza,15,,Activo
+15299,Garagoa,15,,Activo
+15317,Guacamayas,15,,Activo
+15322,Guateque,15,,Activo
+15325,Guayatá,15,,Activo
+15332,Güicán,15,,Activo
+15362,Iza,15,,Activo
+15367,Jenesano,15,,Activo
+15368,Jericó,15,,Activo
+15377,Labranzagrande,15,,Activo
+15380,La Capilla,15,,Activo
+15401,La Victoria,15,,Activo
+15403,La Uvita,15,,Activo
+15407,Villa De Leyva,15,,Activo
+15425,Macanal,15,,Activo
+15442,Maripí,15,,Activo
+15455,Miraflores,15,,Activo
+15464,Mongua,15,,Activo
+15466,Monguí,15,,Activo
+15469,Moniquirá,15,,Activo
+15476,Motavita,15,,Activo
+15480,Muzo,15,,Activo
+15491,Nobsa,15,,Activo
+15494,Nuevo Colón,15,,Activo
+15500,Oicatá,15,,Activo
+15507,Otanche,15,,Activo
+15511,Pachavita,15,,Activo
+15514,Páez,15,,Activo
+15516,Paipa,15,,Activo
+15518,Pajarito,15,,Activo
+15522,Panqueba,15,,Activo
+15531,Pauna,15,,Activo
+15533,Paya,15,,Activo
+15537,Paz De Río,15,,Activo
+15542,Pesca,15,,Activo
+15550,Pisba,15,,Activo
+15572,Puerto Boyacá,15,,Activo
+15580,Quípama,15,,Activo
+15599,Ramiriquí,15,,Activo
+15600,Ráquira,15,,Activo
+15621,Rondón,15,,Activo
+15632,Saboyá,15,,Activo
+15638,Sáchica,15,,Activo
+15646,Samacá,15,,Activo
+15660,San Eduardo,15,,Activo
+15664,San José De Pare,15,,Activo
+15667,San Luis De Gaceno,15,,Activo
+15673,San Mateo,15,,Activo
+15676,San Miguel De Sema,15,,Activo
+15681,San Pablo De Borbur,15,,Activo
+15686,Santana,15,,Activo
+15690,Santa María,15,,Activo
+15693,Santa Rosa De Viterbo,15,,Activo
+15696,Santa Sofía,15,,Activo
+15720,Sativanorte,15,,Activo
+15723,Sativasur,15,,Activo
+15740,Siachoque,15,,Activo
+15753,Soatá,15,,Activo
+15755,Socotá,15,,Activo
+15757,Socha,15,,Activo
+15759,Sogamoso,15,,Activo
+15761,Somondoco,15,,Activo
+15762,Sora,15,,Activo
+15763,Sotaquirá,15,,Activo
+15764,Soracá,15,,Activo
+15774,Susacón,15,,Activo
+15776,Sutamarchán,15,Suta/chán,Activo
+15778,Sutatenza,15,,Activo
+15790,Tasco,15,,Activo
+15798,Tenza,15,,Activo
+15804,Tibaná,15,,Activo
+15806,Tibasosa,15,,Activo
+15808,Tinjacá,15,,Activo
+15810,Tipacoque,15,,Activo
+15814,Toca,15,,Activo
+15816,Togüí,15,,Activo
+15820,Tópaga,15,,Activo
+15822,Tota,15,,Activo
+15832,Tununguá,15,,Activo
+15835,Turmequé,15,,Activo
+15837,Tuta,15,,Activo
+15839,Tutazá,15,,Activo
+15842,Umbita,15,,Activo
+15861,Ventaquemada,15,,Activo
+15879,Viracachá,15,,Activo
+15897,Zetaquira,15,,Activo
+17001,Manizales,17,,Activo
+17013,Aguadas,17,,Activo
+17042,Anserma,17,,Activo
+17050,Aranzazu,17,,Activo
+17088,Belalcázar,17,,Activo
+17174,Chinchiná,17,,Activo
+17272,Filadelfia,17,,Activo
+17380,La Dorada,17,,Activo
+17388,La Merced,17,,Activo
+17433,Manzanares,17,,Activo
+17442,Marmato,17,,Activo
+17444,Marquetalia,17,,Activo
+17446,Marulanda,17,,Activo
+17486,Neira,17,,Activo
+17495,Norcasia,17,,Activo
+17513,Pácora,17,,Activo
+17524,Palestina,17,,Activo
+17541,Pensilvania,17,,Activo
+17614,Riosucio,17,,Activo
+17616,Risaralda,17,,Activo
+17653,Salamina,17,,Activo
+17662,Samaná,17,,Activo
+17665,San José,17,,Activo
+17777,Supía,17,,Activo
+17867,Victoria,17,,Activo
+17873,Villamaría,17,,Activo
+17877,Viterbo,17,,Activo
+18001,Florencia,18,,Activo
+18029,Albania,18,,Activo
+18094,Belén de Los Andaquies,18,,Activo
+18150,Cartagena del Chairá,18,,Activo
+18205,Curillo,18,,Activo
+18247,El Doncello,18,,Activo
+18256,El Paujil,18,,Activo
+18410,La Montañita,18,,Activo
+18460,Milán,18,,Activo
+18479,Morelia,18,,Activo
+18592,Puerto Rico,18,,Activo
+18610,San José del Fragua,18,,Activo
+18753,San Vicente del Caguán,18,,Activo
+18756,Solano,18,,Activo
+18785,Solita,18,,Activo
+18860,Valparaíso,18,,Activo
+19001,Popayán,19,,Activo
+19022,Almaguer,19,,Activo
+19050,Argelia,19,,Activo
+19075,Balboa,19,,Activo
+19100,Bolívar,19,,Activo
+19110,Buenos Aires,19,,Activo
+19130,Cajibío,19,,Activo
+19137,Caldono,19,,Activo
+19142,Caloto,19,,Activo
+19212,Corinto,19,,Activo
+19256,El Tambo,19,,Activo
+19290,Florencia,19,,Activo
+19300,Guachené,19,,Activo
+19318,Guapi,19,,Activo
+19355,Inzá,19,,Activo
+19364,Jambaló,19,,Activo
+19392,La Sierra,19,,Activo
+19397,La Vega,19,,Activo
+19418,López de Micay,19,,Activo
+19450,Mercaderes,19,,Activo
+19455,Miranda,19,,Activo
+19473,Morales,19,,Activo
+19513,Padilla,19,,Activo
+19517,Páez,19,,Activo
+19532,Patía,19,,Activo
+19533,Piamonte,19,,Activo
+19548,Piendamó,19,,Activo
+19573,Puerto Tejada,19,,Activo
+19585,Puracé,19,,Activo
+19622,Rosas,19,,Activo
+19693,San Sebastián,19,,Activo
+19698,Santander de Quilichao,19,,Activo
+19701,Santa Rosa,19,,Activo
+19743,Silvia,19,,Activo
+19760,Sotara,19,,Activo
+19780,Suárez,19,,Activo
+19785,Sucre,19,,Activo
+19807,Timbío,19,,Activo
+19809,Timbiquí,19,,Activo
+19821,Toribio,19,,Activo
+19824,Totoró,19,,Activo
+19845,Villa Rica,19,,Activo
+20001,Valledupar,20,,Activo
+20011,Aguachica,20,,Activo
+20013,Agustín Codazzi,20,,Activo
+20032,Astrea,20,,Activo
+20045,Becerril,20,,Activo
+20060,Bosconia,20,,Activo
+20175,Chimichagua,20,,Activo
+20178,Chiriguaná,20,,Activo
+20228,Curumaní,20,,Activo
+20238,El Copey,20,,Activo
+20250,El Paso,20,,Activo
+20295,Gamarra,20,,Activo
+20310,González,20,,Activo
+20383,La Gloria,20,,Activo
+20400,La Jagua de Ibirico,20,,Activo
+20443,Manaure,20,,Activo
+20517,Pailitas,20,,Activo
+20550,Pelaya,20,,Activo
+20570,Pueblo Bello,20,,Activo
+20614,Río de Oro,20,,Activo
+20621,La Paz,20,,Activo
+20710,San Alberto,20,,Activo
+20750,San Diego,20,,Activo
+20770,San Martín,20,,Activo
+20787,Tamalameque,20,,Activo
+23001,Montería,23,,Activo
+23068,Ayapel,23,,Activo
+23079,Buenavista,23,,Activo
+23090,Canalete,23,,Activo
+23162,Cereté,23,,Activo
+23168,Chimá,23,,Activo
+23182,Chinú,23,,Activo
+23189,Ciénaga de Oro,23,,Activo
+23300,Cotorra,23,,Activo
+23350,La Apartada,23,,Activo
+23417,Lorica,23,,Activo
+23419,Los Córdobas,23,,Activo
+23464,Momil,23,,Activo
+23466,Montelíbano,23,,Activo
+23500,Moñitos,23,,Activo
+23555,Planeta Rica,23,,Activo
+23570,Pueblo Nuevo,23,,Activo
+23574,Puerto Escondido,23,,Activo
+23580,Puerto Libertador,23,,Activo
+23586,Purísima,23,,Activo
+23660,Sahagún,23,,Activo
+23670,San Andrés Sotavento,23,,Activo
+23672,San Antero,23,,Activo
+23675,San Bernardo del Viento,23,,Activo
+23678,San Carlos,23,,Activo
+23682,San José de Uré,23,,Activo
+23686,San Pelayo,23,,Activo
+23807,Tierralta,23,,Activo
+23815,Tuchín,23,,Activo
+23855,Valencia,23,,Activo
+25001,Agua de Dios,25,,Activo
+25019,Albán,25,,Activo
+25035,Anapoima,25,,Activo
+25040,Anolaima,25,,Activo
+25053,Arbeláez,25,,Activo
+25086,Beltrán,25,,Activo
+25095,Bituima,25,,Activo
+25099,Bojacá,25,,Activo
+25120,Cabrera,25,,Activo
+25123,Cachipay,25,,Activo
+25126,Cajicá,25,,Activo
+25148,Caparrapí,25,,Activo
+25151,Caqueza,25,,Activo
+25154,Carmen de Carupa,25,,Activo
+25168,Chaguaní,25,,Activo
+25175,Chía,25,,Activo
+25178,Chipaque,25,,Activo
+25181,Choachí,25,,Activo
+25183,Chocontá,25,,Activo
+25200,Cogua,25,,Activo
+25214,Cota,25,,Activo
+25224,Cucunubá,25,,Activo
+25245,El Colegio,25,,Activo
+25258,El Peñón,25,,Activo
+25260,El Rosal,25,,Activo
+25269,Facatativá,25,,Activo
+25279,Fomeque,25,,Activo
+25281,Fosca,25,,Activo
+25286,Funza,25,,Activo
+25288,Fúquene,25,,Activo
+25290,Fusagasugá,25,,Activo
+25293,Gachala,25,,Activo
+25295,Gachancipá,25,,Activo
+25297,Gachetá,25,,Activo
+25299,Gama,25,,Activo
+25307,Girardot,25,,Activo
+25312,Granada,25,,Activo
+25317,Guachetá,25,,Activo
+25320,Guaduas,25,,Activo
+25322,Guasca,25,,Activo
+25324,Guataquí,25,,Activo
+25326,Guatavita,25,,Activo
+25328,Guayabal de Siquima,25,,Activo
+25335,Guayabetal,25,,Activo
+25339,Gutiérrez,25,,Activo
+25368,Jerusalén,25,,Activo
+25372,Junín,25,,Activo
+25377,La Calera,25,,Activo
+25386,La Mesa,25,,Activo
+25394,La Palma,25,,Activo
+25398,La Peña,25,,Activo
+25402,La Vega,25,,Activo
+25407,Lenguazaque,25,,Activo
+25426,Macheta,25,,Activo
+25430,Madrid,25,,Activo
+25436,Manta,25,,Activo
+25438,Medina,25,,Activo
+25473,Mosquera,25,,Activo
+25483,Nariño,25,,Activo
+25486,Nemocón,25,,Activo
+25488,Nilo,25,,Activo
+25489,Nimaima,25,,Activo
+25491,Nocaima,25,,Activo
+25506,Venecia,25,,Activo
+25513,Pacho,25,,Activo
+25518,Paime,25,,Activo
+25524,Pandi,25,,Activo
+25530,Paratebueno,25,,Activo
+25535,Pasca,25,,Activo
+25572,Puerto Salgar,25,,Activo
+25580,Pulí,25,,Activo
+25592,Quebradanegra,25,,Activo
+25594,Quetame,25,,Activo
+25596,Quipile,25,,Activo
+25599,Apulo,25,,Activo
+25612,Ricaurte,25,,Activo
+25645,San Antonio del Tequendama,25,,Activo
+25649,San Bernardo,25,,Activo
+25653,San Cayetano,25,,Activo
+25658,San Francisco,25,,Activo
+25662,San Juan de Río Seco,25,,Activo
+25718,Sasaima,25,,Activo
+25736,Sesquilé,25,,Activo
+25740,Sibaté,25,,Activo
+25743,Silvania,25,,Activo
+25745,Simijaca,25,,Activo
+25754,Soacha,25,,Activo
+25758,Sopó,25,,Activo
+25769,Subachoque,25,,Activo
+25772,Suesca,25,,Activo
+25777,Supatá,25,,Activo
+25779,Susa,25,,Activo
+25781,Sutatausa,25,,Activo
+25785,Tabio,25,,Activo
+25793,Tausa,25,,Activo
+25797,Tena,25,,Activo
+25799,Tenjo,25,,Activo
+25805,Tibacuy,25,,Activo
+25807,Tibirita,25,,Activo
+25815,Tocaima,25,,Activo
+25817,Tocancipá,25,,Activo
+25823,Topaipí,25,,Activo
+25839,Ubalá,25,,Activo
+25841,Ubaque,25,,Activo
+25843,Villa De San Diego De Ubate,25,,Activo
+25845,Une,25,,Activo
+25851,Útica,25,,Activo
+25862,Vergara,25,,Activo
+25867,Vianí,25,,Activo
+25871,Villagómez,25,,Activo
+25873,Villapinzón,25,,Activo
+25875,Villeta,25,,Activo
+25878,Viotá,25,,Activo
+25885,Yacopí,25,,Activo
+25898,Zipacón,25,,Activo
+25899,Zipaquirá,25,,Activo
+27001,Quibdó,27,,Activo
+27006,Acandí,27,,Activo
+27025,Alto Baudo,27,,Activo
+27050,Atrato,27,,Activo
+27073,Bagadó,27,,Activo
+27075,Bahía Solano,27,,Activo
+27077,Bajo Baudó,27,,Activo
+27086,Belén de Bajira,27,,Activo
+27099,Bojaya,27,,Activo
+27135,El Cantón del San Pablo,27,,Activo
+27150,Carmen del Darien,27,,Activo
+27160,Cértegui,27,,Activo
+27205,Condoto,27,,Activo
+27245,El Carmen de Atrato,27,,Activo
+27250,El Litoral del San Juan,27,,Activo
+27361,Istmina,27,,Activo
+27372,Juradó,27,,Activo
+27413,Lloró,27,,Activo
+27425,Medio Atrato,27,,Activo
+27430,Medio Baudó,27,,Activo
+27450,Medio San Juan,27,,Activo
+27491,Nóvita,27,,Activo
+27495,Nuquí,27,,Activo
+27580,Río Iro,27,,Activo
+27600,Río Quito,27,,Activo
+27615,Riosucio,27,,Activo
+27660,San José del Palmar,27,,Activo
+27745,Sipí,27,,Activo
+27787,Tadó,27,,Activo
+27800,Unguía,27,,Activo
+27810,Unión Panamericana,27,,Activo
+41001,Neiva,41,,Activo
+41006,Acevedo,41,,Activo
+41013,Agrado,41,,Activo
+41016,Aipe,41,,Activo
+41020,Algeciras,41,,Activo
+41026,Altamira,41,,Activo
+41078,Baraya,41,,Activo
+41132,Campoalegre,41,,Activo
+41206,Colombia,41,,Activo
+41244,Elías,41,,Activo
+41298,Garzón,41,,Activo
+41306,Gigante,41,,Activo
+41319,Guadalupe,41,,Activo
+41349,Hobo,41,,Activo
+41357,Iquira,41,,Activo
+41359,Isnos,41,,Activo
+41378,La Argentina,41,,Activo
+41396,La Plata,41,,Activo
+41483,Nátaga,41,,Activo
+41503,Oporapa,41,,Activo
+41518,Paicol,41,,Activo
+41524,Palermo,41,,Activo
+41530,Palestina,41,,Activo
+41548,Pital,41,,Activo
+41551,Pitalito,41,,Activo
+41615,Rivera,41,,Activo
+41660,Saladoblanco,41,,Activo
+41668,San Agustín,41,,Activo
+41676,Santa María,41,,Activo
+41770,Suaza,41,,Activo
+41791,Tarqui,41,,Activo
+41797,Tesalia,41,,Activo
+41799,Tello,41,,Activo
+41801,Teruel,41,,Activo
+41807,Timaná,41,,Activo
+41872,Villavieja,41,,Activo
+41885,Yaguará,41,,Activo
+44001,Riohacha,44,,Activo
+44035,Albania,44,,Activo
+44078,Barrancas,44,,Activo
+44090,Dibula,44,,Activo
+44098,Distracción,44,,Activo
+44110,El Molino,44,,Activo
+44279,Fonseca,44,,Activo
+44378,Hatonuevo,44,,Activo
+44420,La Jagua del Pilar,44,,Activo
+44430,Maicao,44,,Activo
+44560,Manaure,44,,Activo
+44650,San Juan del Cesar,44,,Activo
+44847,Uribia,44,,Activo
+44855,Urumita,44,,Activo
+44874,Villanueva,44,,Activo
+47001,Santa Marta,47,,Activo
+47030,Algarrobo,47,,Activo
+47053,Aracataca,47,,Activo
+47058,Ariguaní,47,,Activo
+47161,Cerro San Antonio,47,,Activo
+47170,Chivolo,47,,Activo
+47189,Ciénaga,47,,Activo
+47205,Concordia,47,,Activo
+47245,El Banco,47,,Activo
+47258,El Piñon,47,,Activo
+47268,El Retén,47,,Activo
+47288,Fundación,47,,Activo
+47318,Guamal,47,,Activo
+47460,Nueva Granada,47,,Activo
+47541,Pedraza,47,,Activo
+47545,Pijiño del Carmen,47,,Activo
+47551,Pivijay,47,,Activo
+47555,Plato,47,,Activo
+47570,Pueblo Viejo,47,,Activo
+47605,Remolino,47,,Activo
+47660,Sabanas de San Angel,47,,Activo
+47675,Salamina,47,,Activo
+47692,San Sebastián de Buenavista,47,,Activo
+47703,San Zenón,47,,Activo
+47707,Santa Ana,47,,Activo
+47720,Santa Bárbara de Pinto,47,,Activo
+47745,Sitionuevo,47,,Activo
+47798,Tenerife,47,,Activo
+47960,Zapayán,47,,Activo
+47980,Zona Bananera,47,,Activo
+50001,Villavicencio,50,,Activo
+50006,Acacias,50,,Activo
+50110,Barranca de Upía,50,,Activo
+50124,Cabuyaro,50,,Activo
+50150,Castilla la Nueva,50,,Activo
+50223,Cubarral,50,,Activo
+50226,Cumaral,50,,Activo
+50245,El Calvario,50,,Activo
+50251,El Castillo,50,,Activo
+50270,El Dorado,50,,Activo
+50287,Fuente de Oro,50,,Activo
+50313,Granada,50,,Activo
+50318,Guamal,50,,Activo
+50325,Mapiripán,50,,Activo
+50330,Mesetas,50,,Activo
+50350,La Macarena,50,,Activo
+50370,Uribe,50,,Activo
+50400,Lejanías,50,,Activo
+50450,Puerto Concordia,50,,Activo
+50568,Puerto Gaitán,50,,Activo
+50573,Puerto López,50,,Activo
+50577,Puerto Lleras,50,,Activo
+50590,Puerto Rico,50,,Activo
+50606,Restrepo,50,,Activo
+50680,San Carlos de Guaroa,50,,Activo
+50683,San Juan de Arama,50,,Activo
+50686,San Juanito,50,,Activo
+50689,San Martín,50,,Activo
+50711,Vista Hermosa,50,,Activo
+52001,Pasto,52,,Activo
+52019,Albán,52,,Activo
+52022,Aldana,52,,Activo
+52036,Ancuyá,52,,Activo
+52051,Arboleda,52,,Activo
+52079,Barbacoas,52,,Activo
+52083,Belén,52,,Activo
+52110,Buesaco,52,,Activo
+52203,Colón,52,,Activo
+52207,Consaca,52,,Activo
+52210,Contadero,52,,Activo
+52215,Córdoba,52,,Activo
+52224,Cuaspud,52,,Activo
+52227,Cumbal,52,,Activo
+52233,Cumbitara,52,,Activo
+52240,Chachagüí,52,,Activo
+52250,El Charco,52,,Activo
+52254,El Peñol,52,,Activo
+52256,El Rosario,52,,Activo
+52258,El Tablón de Gómez,52,,Activo
+52260,El Tambo,52,,Activo
+52287,Funes,52,,Activo
+52317,Guachucal,52,,Activo
+52320,Guaitarilla,52,,Activo
+52323,Gualmatán,52,,Activo
+52352,Iles,52,,Activo
+52354,Imués,52,,Activo
+52356,Ipiales,52,,Activo
+52378,La Cruz,52,,Activo
+52381,La Florida,52,,Activo
+52385,La Llanada,52,,Activo
+52390,La Tola,52,,Activo
+52399,La Unión,52,,Activo
+52405,Leiva,52,,Activo
+52411,Linares,52,,Activo
+52418,Los Andes,52,,Activo
+52427,Magüí,52,,Activo
+52435,Mallama,52,,Activo
+52473,Mosquera,52,,Activo
+52480,Nariño,52,,Activo
+52490,Olaya Herrera,52,,Activo
+52506,Ospina,52,,Activo
+52520,Francisco Pizarro,52,,Activo
+52540,Policarpa,52,,Activo
+52560,Potosí,52,,Activo
+52565,Providencia,52,,Activo
+52573,Puerres,52,,Activo
+52585,Pupiales,52,,Activo
+52612,Ricaurte,52,,Activo
+52621,Roberto Payán,52,,Activo
+52678,Samaniego,52,,Activo
+52683,Sandoná,52,,Activo
+52685,San Bernardo,52,,Activo
+52687,San Lorenzo,52,,Activo
+52693,San Pablo,52,,Activo
+52694,San Pedro de Cartago,52,,Activo
+52696,Santa Bárbara,52,,Activo
+52699,Santacruz,52,,Activo
+52720,Sapuyes,52,,Activo
+52786,Taminango,52,,Activo
+52788,Tangua,52,,Activo
+52835,San Andrés de Tumaco,52,,Activo
+52838,Túquerres,52,,Activo
+52885,Yacuanquer,52,,Activo
+54001,Cúcuta,54,,Activo
+54003,Abrego,54,,Activo
+54051,Arboledas,54,,Activo
+54099,Bochalema,54,,Activo
+54109,Bucarasica,54,,Activo
+54125,Cácota,54,,Activo
+54128,Cachirá,54,,Activo
+54172,Chinácota,54,,Activo
+54174,Chitagá,54,,Activo
+54206,Convención,54,,Activo
+54223,Cucutilla,54,,Activo
+54239,Durania,54,,Activo
+54245,El Carmen,54,,Activo
+54250,El Tarra,54,,Activo
+54261,El Zulia,54,,Activo
+54313,Gramalote,54,,Activo
+54344,Hacarí,54,,Activo
+54347,Herrán,54,,Activo
+54377,Labateca,54,,Activo
+54385,La Esperanza,54,,Activo
+54398,La Playa,54,,Activo
+54405,Los Patios,54,,Activo
+54418,Lourdes,54,,Activo
+54480,Mutiscua,54,,Activo
+54498,Ocaña,54,,Activo
+54518,Pamplona,54,,Activo
+54520,Pamplonita,54,,Activo
+54553,Puerto Santander,54,,Activo
+54599,Ragonvalia,54,,Activo
+54660,Salazar,54,,Activo
+54670,San Calixto,54,,Activo
+54673,San Cayetano,54,,Activo
+54680,Santiago,54,,Activo
+54720,Sardinata,54,,Activo
+54743,Silos,54,,Activo
+54800,Teorama,54,,Activo
+54810,Tibú,54,,Activo
+54820,Toledo,54,,Activo
+54871,Villa Caro,54,,Activo
+54874,Villa del Rosario,54,,Activo
+63001,Armenia,63,,Activo
+63111,Buenavista,63,,Activo
+63130,Calarcá,63,,Activo
+63190,Circasia,63,,Activo
+63212,Córdoba,63,,Activo
+63272,Filandia,63,,Activo
+63302,Génova,63,,Activo
+63401,La Tebaida,63,,Activo
+63470,Montenegro,63,,Activo
+63548,Pijao,63,,Activo
+63594,Quimbaya,63,,Activo
+63690,Salento,63,,Activo
+66001,Pereira,66,,Activo
+66045,Apía,66,,Activo
+66075,Balboa,66,,Activo
+66088,Belén de Umbría,66,,Activo
+66170,Dosquebradas,66,,Activo
+66318,Guática,66,,Activo
+66383,La Celia,66,,Activo
+66400,La Virginia,66,,Activo
+66440,Marsella,66,,Activo
+66456,Mistrató,66,,Activo
+66572,Pueblo Rico,66,,Activo
+66594,Quinchía,66,,Activo
+66682,Santa Rosa de Cabal,66,,Activo
+66687,Santuario,66,,Activo
+68001,Bucaramanga,68,,Activo
+68013,Aguada,68,,Activo
+68020,Albania,68,,Activo
+68051,Aratoca,68,,Activo
+68077,Barbosa,68,,Activo
+68079,Barichara,68,,Activo
+68081,Barrancabermeja,68,,Activo
+68092,Betulia,68,,Activo
+68101,Bolívar,68,,Activo
+68121,Cabrera,68,,Activo
+68132,California,68,,Activo
+68147,Capitanejo,68,,Activo
+68152,Carcasí,68,,Activo
+68160,Cepitá,68,,Activo
+68162,Cerrito,68,,Activo
+68167,Charalá,68,,Activo
+68169,Charta,68,,Activo
+68176,Chimá,68,,Activo
+68179,Chipatá,68,,Activo
+68190,Cimitarra,68,,Activo
+68207,Concepción,68,,Activo
+68209,Confines,68,,Activo
+68211,Contratación,68,,Activo
+68217,Coromoro,68,,Activo
+68229,Curití,68,,Activo
+68235,El Carmen de Chucurí,68,,Activo
+68245,El Guacamayo,68,,Activo
+68250,El Peñón,68,,Activo
+68255,El Playón,68,,Activo
+68264,Encino,68,,Activo
+68266,Enciso,68,,Activo
+68271,Florián,68,,Activo
+68276,Floridablanca,68,,Activo
+68296,Galán,68,,Activo
+68298,Gambita,68,,Activo
+68307,Girón,68,,Activo
+68318,Guaca,68,,Activo
+68320,Guadalupe,68,,Activo
+68322,Guapotá,68,,Activo
+68324,Guavatá,68,,Activo
+68327,Güepsa,68,,Activo
+68344,Hato,68,,Activo
+68368,Jesús María,68,,Activo
+68370,Jordán,68,,Activo
+68377,La Belleza,68,,Activo
+68385,Landázuri,68,,Activo
+68397,La Paz,68,,Activo
+68406,Lebríja,68,,Activo
+68418,Los Santos,68,,Activo
+68425,Macaravita,68,,Activo
+68432,Málaga,68,,Activo
+68444,Matanza,68,,Activo
+68464,Mogotes,68,,Activo
+68468,Molagavita,68,,Activo
+68498,Ocamonte,68,,Activo
+68500,Oiba,68,,Activo
+68502,Onzaga,68,,Activo
+68522,Palmar,68,,Activo
+68524,Palmas del Socorro,68,,Activo
+68533,Páramo,68,,Activo
+68547,Piedecuesta,68,,Activo
+68549,Pinchote,68,,Activo
+68572,Puente Nacional,68,,Activo
+68573,Puerto Parra,68,,Activo
+68575,Puerto Wilches,68,,Activo
+68615,Rionegro,68,,Activo
+68655,Sabana de Torres,68,,Activo
+68669,San Andrés,68,,Activo
+68673,San Benito,68,,Activo
+68679,San Gil,68,,Activo
+68682,San Joaquín,68,,Activo
+68684,San José de Miranda,68,,Activo
+68686,San Miguel,68,,Activo
+68689,San Vicente de Chucurí,68,,Activo
+68705,Santa Bárbara,68,,Activo
+68720,Santa Helena del Opón,68,,Activo
+68745,Simacota,68,,Activo
+68755,Socorro,68,,Activo
+68770,Suaita,68,,Activo
+68773,Sucre,68,,Activo
+68780,Suratá,68,,Activo
+68820,Tona,68,,Activo
+68855,Valle de San José,68,,Activo
+68861,Vélez,68,,Activo
+68867,Vetas,68,,Activo
+68872,Villanueva,68,,Activo
+68895,Zapatoca,68,,Activo
+70001,Sincelejo,70,,Activo
+70110,Buenavista,70,,Activo
+70124,Caimito,70,,Activo
+70204,Coloso,70,,Activo
+70215,Corozal,70,,Activo
+70221,Coveñas,70,,Activo
+70230,Chalán,70,,Activo
+70233,El Roble,70,,Activo
+70235,Galeras,70,,Activo
+70265,Guaranda,70,,Activo
+70400,La Unión,70,,Activo
+70418,Los Palmitos,70,,Activo
+70429,Majagual,70,,Activo
+70473,Morroa,70,,Activo
+70508,Ovejas,70,,Activo
+70523,Palmito,70,,Activo
+70670,Sampués,70,,Activo
+70678,San Benito Abad,70,,Activo
+70702,San Juan de Betulia,70,,Activo
+70708,San Marcos,70,,Activo
+70713,San Onofre,70,,Activo
+70717,San Pedro,70,,Activo
+70742,San Luis de Sincé,70,,Activo
+70771,Sucre,70,,Activo
+70820,Santiago de Tolú,70,,Activo
+70823,Tolú Viejo,70,,Activo
+73001,Ibagué,73,,Activo
+73024,Alpujarra,73,,Activo
+73026,Alvarado,73,,Activo
+73030,Ambalema,73,,Activo
+73043,Anzoátegui,73,,Activo
+73055,Armero,73,,Activo
+73067,Ataco,73,,Activo
+73124,Cajamarca,73,,Activo
+73148,Carmen de Apicala,73,,Activo
+73152,Casabianca,73,,Activo
+73168,Chaparral,73,,Activo
+73200,Coello,73,,Activo
+73217,Coyaima,73,,Activo
+73226,Cunday,73,,Activo
+73236,Dolores,73,,Activo
+73268,Espinal,73,,Activo
+73270,Falan,73,,Activo
+73275,Flandes,73,,Activo
+73283,Fresno,73,,Activo
+73319,Guamo,73,,Activo
+73347,Herveo,73,,Activo
+73349,Honda,73,,Activo
+73352,Icononzo,73,,Activo
+73408,Lérida,73,,Activo
+73411,Líbano,73,,Activo
+73443,Mariquita,73,,Activo
+73449,Melgar,73,,Activo
+73461,Murillo,73,,Activo
+73483,Natagaima,73,,Activo
+73504,Ortega,73,,Activo
+73520,Palocabildo,73,,Activo
+73547,Piedras,73,,Activo
+73555,Planadas,73,,Activo
+73563,Prado,73,,Activo
+73585,Purificación,73,,Activo
+73616,Rio Blanco,73,,Activo
+73622,Roncesvalles,73,,Activo
+73624,Rovira,73,,Activo
+73671,Saldaña,73,,Activo
+73675,San Antonio,73,,Activo
+73678,San Luis,73,,Activo
+73686,Santa Isabel,73,,Activo
+73770,Suárez,73,,Activo
+73854,Valle de San Juan,73,,Activo
+73861,Venadillo,73,,Activo
+73870,Villahermosa,73,,Activo
+73873,Villarrica,73,,Activo
+76001,Cali,76,,Activo
+76020,Alcalá,76,,Activo
+76036,Andalucía,76,,Activo
+76041,Ansermanuevo,76,,Activo
+76054,Argelia,76,,Activo
+76100,Bolívar,76,,Activo
+76109,Buenaventura,76,,Activo
+76111,Buga,76,,Activo
+76113,Bugalagrande,76,,Activo
+76122,Caicedonia,76,,Activo
+76126,Calima,76,,Activo
+76130,Candelaria,76,,Activo
+76147,Cartago,76,,Activo
+76233,Dagua,76,,Activo
+76243,El Águila,76,,Activo
+76246,El Cairo,76,,Activo
+76248,El Cerrito,76,,Activo
+76250,El Dovio,76,,Activo
+76275,Florida,76,,Activo
+76306,Ginebra,76,,Activo
+76318,Guacarí,76,,Activo
+76364,Jamundí,76,,Activo
+76377,La Cumbre,76,,Activo
+76400,La Unión,76,,Activo
+76403,La Victoria,76,,Activo
+76497,Obando,76,,Activo
+76520,Palmira,76,,Activo
+76563,Pradera,76,,Activo
+76606,Restrepo,76,,Activo
+76616,Riofrío,76,,Activo
+76622,Roldanillo,76,,Activo
+76670,San Pedro,76,,Activo
+76736,Sevilla,76,,Activo
+76823,Toro,76,,Activo
+76828,Trujillo,76,,Activo
+76834,Tuluá,76,,Activo
+76845,Ulloa,76,,Activo
+76863,Versalles,76,,Activo
+76869,Vijes,76,,Activo
+76890,Yotoco,76,,Activo
+76892,Yumbo,76,,Activo
+76895,Zarzal,76,,Activo
+81001,Arauca,81,,Activo
+81065,Arauquita,81,,Activo
+81220,Cravo Norte,81,,Activo
+81300,Fortul,81,,Activo
+81591,Puerto Rondón,81,,Activo
+81736,Saravena,81,,Activo
+81794,Tame,81,,Activo
+85001,Yopal,85,,Activo
+85010,Aguazul,85,,Activo
+85015,Chámeza,85,,Activo
+85125,Hato Corozal,85,,Activo
+85136,La Salina,85,,Activo
+85139,Maní,85,,Activo
+85162,Monterrey,85,,Activo
+85225,Nunchía,85,,Activo
+85230,Orocué,85,,Activo
+85250,Paz de Ariporo,85,,Activo
+85263,Pore,85,,Activo
+85279,Recetor,85,,Activo
+85300,Sabanalarga,85,,Activo
+85315,Sácama,85,,Activo
+85325,San Luis de Gaceno,85,,Activo
+85400,Támara,85,,Activo
+85410,Tauramena,85,,Activo
+85430,Trinidad,85,,Activo
+85440,Villanueva,85,,Activo
+86001,Mocoa,86,,Activo
+86219,Colón,86,,Activo
+86320,Orito,86,,Activo
+86568,Puerto Asís,86,,Activo
+86569,Puerto Caicedo,86,,Activo
+86571,Puerto Guzmán,86,,Activo
+86573,Leguízamo,86,,Activo
+86749,Sibundoy,86,,Activo
+86755,San Francisco,86,,Activo
+86757,San Miguel,86,,Activo
+86760,Santiago,86,,Activo
+86865,Valle de Guamez,86,,Activo
+86885,Villagarzón,86,,Activo
+88001,San Andrés,88,,Activo
+88564,Providencia,88,,Activo
+91001,Leticia,91,,Activo
+91263,El Encanto,91,,Activo
+91405,La Chorrera,91,,Activo
+91407,La Pedrera,91,,Activo
+91430,La Victoria,91,,Activo
+91460,Miriti Paraná,91,,Activo
+91530,Puerto Alegría,91,,Activo
+91536,Puerto Arica,91,,Activo
+91540,Puerto Nariño,91,,Activo
+91669,Puerto Santander,91,,Activo
+91798,Tarapacá,91,,Activo
+94001,Inírida,94,,Activo
+94343,Barranco Minas,94,,Activo
+94663,Mapiripana,94,,Activo
+94883,San Felipe,94,,Activo
+94884,Puerto Colombia,94,,Activo
+94885,La Guadalupe,94,,Activo
+94886,Cacahual,94,,Activo
+94887,Pana Pana,94,,Activo
+94888,Morichal,94,,Activo
+95001,San José del Guaviare,95,,Activo
+95015,Calamar,95,,Activo
+95025,El Retorno,95,,Activo
+95200,Miraflores,95,,Activo
+97001,Mitú,97,,Activo
+97161,Caruru,97,,Activo
+97511,Pacoa,97,,Activo
+97666,Taraira,97,,Activo
+97777,Papunaua,97,,Activo
+97889,Yavaraté,97,,Activo
+99001,Puerto Carreño,99,,Activo
+99524,La Primavera,99,,Activo
+99624,Santa Rosalía,99,,Activo
+99773,Cumaribo,99,,Activo
