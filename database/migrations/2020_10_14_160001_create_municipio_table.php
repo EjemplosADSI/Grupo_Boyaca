@@ -14,7 +14,7 @@ class CreateMunicipioTable extends Migration
      */
     public function up()
     {
-        Schema::create('municipio', function (Blueprint $table) {
+        Schema::create('municipios', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->unique()->index();
             $table->unsignedBigInteger('departamento_id')->index(); //llave foranea
@@ -25,7 +25,7 @@ class CreateMunicipioTable extends Migration
 
             $table->foreign('departamento_id')
                 ->references('id')
-                ->on('departamento');
+                ->on('departamentos');
             $table->softDeletes();
 
         });
@@ -38,6 +38,6 @@ class CreateMunicipioTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('municipio');
+        Schema::dropIfExists('municipios');
     }
 }
