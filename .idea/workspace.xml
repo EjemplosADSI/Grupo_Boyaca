@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4434b9b-6076-4e45-8ffb-b6e525890c55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Enums/BasicStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/DepartamentoRegion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Grupo_Boyaca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Grupo_Boyaca.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Enums/Rol.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Enums/TipoDocumento.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_160001_create_municipio_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_160001_create_municipio_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_162805_create_empresa_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_162805_create_empresa_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_163530_create_departamento_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_160000_create_departamento_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_14_164315_create_sucursal_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_164315_create_sucursal_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +187,7 @@
       <updated>1602687405099</updated>
       <workItem from="1602687406455" duration="2090000" />
       <workItem from="1602690114481" duration="3115000" />
-      <workItem from="1602699783412" duration="3167000" />
+      <workItem from="1602699783412" duration="7941000" />
     </task>
     <task id="LOCAL-00001" summary="* Primer Commit con estructura del proyecto de laravel">
       <created>1602687554039</created>
@@ -198,26 +196,36 @@
       <option name="project" value="LOCAL" />
       <updated>1602687554039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="* Migracion de Departamentos">
+      <created>1602703151689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602703151689</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="* Primer Commit con estructura del proyecto de laravel" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Primer Commit con estructura del proyecto de laravel" />
+    <MESSAGE value="* Migracion de Departamentos" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Migracion de Departamentos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602702184071">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602702184071" />
-    <state x="300" y="0" key="CommitChangelistDialog2" timestamp="1602687553172">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602703150843">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="300" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602687553172" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602703150843" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602699799049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -230,6 +238,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="483" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602702045224" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602703153048">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602703153048" />
+    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602705224254">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602705224254" />
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602687605205">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
