@@ -26,13 +26,24 @@ class CreateUsersTable extends Migration
             $table->enum('rol', Rol::getValues());
             $table->unsignedBigInteger('municipio_id')->index()->unsigned(); //llave foranea
             $table->string('direccion', 80);
+            $table->string('email', 320)->unique();
+            $table->string('password')->nullable();
+            $table->enum('estado', BasicStatus::getValues())->default(BasicStatus::Activo);
+            $table->unsignedBigInteger('empresa_id')->index()->unsigned(); //llave foranea
 
 
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('municipio_id')
+                ->references('id')
+                ->on('municipios');
+
+            $table->foreign('empresa_id')
+                ->references('id')->on('empresas');
+
+            $table->softDeletes();
+
         });
     }
 
