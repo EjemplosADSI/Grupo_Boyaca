@@ -17,11 +17,14 @@ use Spatie\Permission\Traits\HasRoles;
  * @property int $id
  * @property int|null $parent_id
  * @property string $title
+ * @property string $label
+ * @property string $label_color
  * @property string|null $description
  * @property string|null $model
  * @property string|null $route
  * @property int $order
  * @property string|null $icon
+ * @property string|null $icon_color
  * @property int $enabled
  * @property mixed|null $created_at
  * @property mixed|null $updated_at
