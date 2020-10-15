@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4434b9b-6076-4e45-8ffb-b6e525890c55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Compra.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DataTables/CompraDataTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DataTables/DetalleCompraDataTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DetalleCompra.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CompraController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleCompraController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CompraStoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/CompraFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/DetalleCompraFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/CompraSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/DetalleCompraSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,11 +192,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Grupo_Boyaca\app\Http\Requests" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Grupo_Boyaca\app\Http\Requests" />
     </key>
   </component>
   <component name="RunManager">
@@ -226,7 +211,7 @@
       <workItem from="1602687406455" duration="2090000" />
       <workItem from="1602690114481" duration="3115000" />
       <workItem from="1602699783412" duration="12634000" />
-      <workItem from="1602763221066" duration="6277000" />
+      <workItem from="1602763221066" duration="19322000" />
     </task>
     <task id="LOCAL-00001" summary="* Primer Commit con estructura del proyecto de laravel">
       <created>1602687554039</created>
@@ -256,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602716366021</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="* Creo Factoria, Model, DataTable, StoreRequest, Controlador del Modulo de Empresa.">
+      <created>1602769692772</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602769692772</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,26 +262,14 @@
     <MESSAGE value="* Migracion de Departamentos" />
     <MESSAGE value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums" />
     <MESSAGE value="* Migracion de Ventas y Compras&#10;* Enums FormaPago.php, EstadoVenta.php y EstadoCompra.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Migracion de Ventas y Compras&#10;* Enums FormaPago.php, EstadoVenta.php y EstadoCompra.php" />
+    <MESSAGE value="* Creo Factoria, Model, DataTable, StoreRequest, Controlador del Modulo de Empresa." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Creo Factoria, Model, DataTable, StoreRequest, Controlador del Modulo de Empresa." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602714273399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602714273399" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602787916148">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602787916148" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602786971759">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602786971759" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602716365317">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602716365317" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602778431895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602778431895" />
@@ -297,26 +277,7 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="206" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1602702194630" />
-    <state x="483" y="87" key="NewPhpClassDialog" timestamp="1602778570942">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="483" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602778570942" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602786916241">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602786916241" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602716371963">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602716371963" />
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602772352470">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602772352470" />
-    <state x="263" y="19" key="com.intellij.database.dbimport.ImportDialog" timestamp="1602772318199">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="263" y="19" key="com.intellij.database.dbimport.ImportDialog/0.0.1366.728@0.0.1366.728" timestamp="1602772318199" />
+
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602763731263">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -329,5 +290,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602687803488" />
+
   </component>
 </project>

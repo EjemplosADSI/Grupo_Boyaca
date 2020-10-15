@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\EmpresaDataTable;
+use App\DataTables\ProductoDataTable;
 use App\Empresa;
 use App\Http\Requests\EmpresaStoreRequest;
+use App\Http\Requests\ProductoStoreRequest;
 use App\Municipio;
+use App\Producto;
 use App\Traits\ChartConfigController;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
@@ -15,7 +18,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use View;
 
-class EmpresaController extends Controller
+class ProductoController extends Controller
 {
     use ChartConfigController;
 
@@ -33,12 +36,12 @@ class EmpresaController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param EmpresaDataTable $dataTable
+     * @param ProductoDataTable $dataTable
      * @return View
      */
-    public function index (EmpresaDataTable $dataTable)
+    public function index (ProductoDataTable $dataTable)
     {
-        return $dataTable->render('empresa.index');
+        return $dataTable->render('producto.index');
     }
 
     /**
@@ -48,22 +51,22 @@ class EmpresaController extends Controller
      */
     public function create ()
     {
-        $empresa = new Empresa();
-        return view("empresa.create", compact('empresa'));
+        $producto = new Producto();
+        return view("producto.create", compact('producto'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param EmpresaStoreRequest $request
+     * @param ProductoStoreRequest $request
      * @return RedirectResponse
      */
-    public function store (EmpresaStoreRequest $request)
+    public function store (ProductoStoreRequest $request)
     {
         $validated = $request->validated();
-        $empresa = new Empresa($validated);
-        if ($empresa->save()) {
-            return redirect()->route('empresa.show', $empresa);
+        $producto = new Producto($validated);
+        if ($producto->save()) {
+            return redirect()->route('producto.show', $producto);
         }
         return redirect()->back();
     }
@@ -71,41 +74,41 @@ class EmpresaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  EmpresaDataTable  $dataTable
-     * @param  Empresa  $empresa
+     * @param  ProductoDataTable  $dataTable
+     * @param  Producto  $producto
      * @return Factory|\Illuminate\View\View
      */
-    public function show (EmpresaDataTable $dataTable, Empresa $empresa)
+    public function show (ProductoDataTable $dataTable, Producto $producto)
     {
-        return view('empresa.show', compact('empresa'));
+        return view('producto.show', compact('producto'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Empresa  $empresa
+     * @param  Producto  $producto
      * @return Factory|\Illuminate\View\View
      */
-    public function edit(Empresa $empresa)
+    public function edit(Producto $producto)
     {
-        return view('empresa.edit')->with('empresa', $empresa);
+        return view('producto.edit')->with('producto', $producto);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param EmpresaStoreRequest $request
+     * @param ProductoStoreRequest $request
      * @param                          $id
      * @return RedirectResponse
      */
-    public function update (EmpresaStoreRequest $request, $id)
+    public function update (ProductoStoreRequest $request, $id)
     {
         $validated = collect($request->validated());
-        $empresa = Empresa::findOrFail($id);
-        if ($empresa->update($validated->toArray())) {
-            return redirect()->route('empresa.show', $empresa);
+        $producto = Producto::findOrFail($id);
+        if ($producto->update($validated->toArray())) {
+            return redirect()->route('producto.show', $producto);
         }
-        return redirect()->route('empresa.update', $id);
+        return redirect()->route('producto.update', $id);
     }
 
     /**
@@ -113,25 +116,26 @@ class EmpresaController extends Controller
      *
      * @return Application|Factory|\Illuminate\View\View
      */
+
     public function statistics ()
     {
-        $chartRegistros = $this->generateRegistersChart("Empresa", "Empresas");
-        $chartEstado = $this->generateEnumChart('Empresa', 'estado', "Estado", 'bar');
+        $chartRegistros = $this->generateRegistersChart("Producto", "Productos");
 
-        return view('empresa.statistics')->with(compact('chartRegistros', 'chartRegion', 'chartEstado'));
+
+        return view('producto.statistics')->with(compact('chartRegistros'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Empresa  $empresa
+     * @param  Producto  $producto
      * @return RedirectResponse
      * @throws Exception
      */
-    public function destroy (Empresa $empresa)
+    public function destroy (Empresa $producto)
     {
-        $empresa->delete();
-        return redirect()->route('empresa.index');
+        $producto->delete();
+        return redirect()->route('prodcuto.index');
     }
 
     /**
@@ -144,9 +148,9 @@ class EmpresaController extends Controller
     public function updateDataForAjax (Request $request, $id)
     {
         $input = $request->all();
-        $empresa = Empresa::findOrFail($id);
-        $empresa->{$input['campo']} = $input['valor'];
-        if ($result = $empresa->update()) {
+        $producto = Producto::findOrFail($id);
+        $producto->{$input['campo']} = $input['valor'];
+        if ($result = $producto->update()) {
             return response()->json(['status' => 200, 'success' => $result]);
         } else {
             return response()->json(['status' => 500, 'error' => $result]);
