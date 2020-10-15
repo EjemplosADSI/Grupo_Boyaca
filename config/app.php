@@ -179,7 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\BoyacaHelperServiceProvider::class,
-        App\Providers\FormServiceProvider::class,
+        App\Providers\FormServiceProvider::class
 
     ],
 
