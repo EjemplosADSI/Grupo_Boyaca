@@ -169,7 +169,7 @@ class VentaDataTable extends DataTable implements FromView, ShouldAutoSize, With
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new ventaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
+
     }
 
     /**

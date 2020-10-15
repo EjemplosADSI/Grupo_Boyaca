@@ -193,9 +193,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\Grupo_Boyaca\app\Http\Requests" />
-      <recent name="C:\laragon\www\Grupo_Boyaca\app\DataTables" />
     </key>
   </component>
   <component name="RunManager">
@@ -215,7 +212,7 @@
       <workItem from="1602687406455" duration="2090000" />
       <workItem from="1602690114481" duration="3115000" />
       <workItem from="1602699783412" duration="12634000" />
-      <workItem from="1602763221066" duration="19322000" />
+      <workItem from="1602763221066" duration="26456000" />
     </task>
     <task id="LOCAL-00001" summary="* Primer Commit con estructura del proyecto de laravel">
       <created>1602687554039</created>
@@ -252,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602769692772</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="* Creacion de factorias, modelos, datatables, request y controladores de los modulos Venta.php y DetalleVenta.php.">
+      <created>1602788077190</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602788077190</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,44 +271,27 @@
     <MESSAGE value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums" />
     <MESSAGE value="* Migracion de Ventas y Compras&#10;* Enums FormaPago.php, EstadoVenta.php y EstadoCompra.php" />
     <MESSAGE value="* Creo Factoria, Model, DataTable, StoreRequest, Controlador del Modulo de Empresa." />
-    <option name="LAST_COMMIT_MESSAGE" value="* Creo Factoria, Model, DataTable, StoreRequest, Controlador del Modulo de Empresa." />
+    <MESSAGE value="* Creacion de factorias, modelos, datatables, request y controladores de los modulos Venta.php y DetalleVenta.php." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Creacion de factorias, modelos, datatables, request y controladores de los modulos Venta.php y DetalleVenta.php." />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602714273399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602714273399" />
-
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602787059555" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602769692080">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602769692080" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602699799049">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602699799049" />
     <state width="206" height="457" key="HiddenNamespacesPopup" timestamp="1602702194630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="206" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1602702194630" />
-    <state x="483" y="87" key="NewPhpClassDialog" timestamp="1602779916153">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602776346362" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602769696045">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
 
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602763731263">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602763731263" />
+    <state x="53" y="0" width="704" height="487" key="dock-window-1" timestamp="1602773486334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="53" y="0" width="704" height="487" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1602773486334" />
     <state x="484" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602687803488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

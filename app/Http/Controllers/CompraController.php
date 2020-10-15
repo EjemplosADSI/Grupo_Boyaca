@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Venta;
-use Illuminate\Http\Request;
-use App\DataTables\DetalleVentaDataTable;
-use App\Http\Requests\VentaStoreRequest;
+use App\Compra;
+use App\DataTables\CompraDataTable;
+use App\Http\Requests\CompraStoreRequest;
 use App\Traits\ChartConfigController;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use View;
 
-class VentaController extends Controller
+class CompraController extends Controller
 {
     use ChartConfigController;
 
@@ -32,12 +32,12 @@ class VentaController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param DetalleVentaDataTable $dataTable
+     * @param CompraDataTable $dataTable
      * @return View
      */
-    public function index (DetalleVentaDataTable $dataTable)
+    public function index (CompraDataTable $dataTable)
     {
-        return $dataTable->render('venta.index');
+        return $dataTable->render('compra.index');
     }
 
     /**
@@ -47,22 +47,22 @@ class VentaController extends Controller
      */
     public function create ()
     {
-        $venta = new Venta();
-        return view("venta.create", compact('venta'));
+        $compra = new Compra();
+        return view("compra.create", compact('compra'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param VentaStoreRequest $request
+     * @param CompraStoreRequest $request
      * @return RedirectResponse
      */
-    public function store (VentaStoreRequest $request)
+    public function store (CompraStoreRequest $request)
     {
         $validated = $request->validated();
-        $venta = new Venta($validated);
-        if ($venta->save()) {
-            return redirect()->route('venta.show', $venta);
+        $compra = new Compra($validated);
+        if ($compra->save()) {
+            return redirect()->route('compra.show', $compra);
         }
         return redirect()->back();
     }
@@ -70,41 +70,41 @@ class VentaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  DetalleVentaDataTable  $dataTable
-     * @param  Venta  $venta
+     * @param  CompraDataTable  $dataTable
+     * @param  Compra  $compra
      * @return Factory|\Illuminate\View\View
      */
-    public function show (DetalleVentaDataTable $dataTable, Venta $venta)
+    public function show (CompraDataTable $dataTable, Compra $compra)
     {
-        return view('venta.show', compact('venta'));
+        return view('compra.show', compact('compra'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Venta  $venta
+     * @param  Compra  $compra
      * @return Factory|\Illuminate\View\View
      */
-    public function edit(Venta $venta)
+    public function edit(Compra $compra)
     {
-        return view('venta.edit')->with('venta', $venta);
+        return view('compra.edit')->with('compra', $compra);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param VentaStoreRequest $request
+     * @param CompraStoreRequest $request
      * @param                          $id
      * @return RedirectResponse
      */
-    public function update (VentaStoreRequest $request, $id)
+    public function update (CompraStoreRequest $request, $id)
     {
         $validated = collect($request->validated());
-        $venta = Venta::findOrFail($id);
-        if ($venta->update($validated->toArray())) {
-            return redirect()->route('venta.show', $venta);
+        $compra = Compra::findOrFail($id);
+        if ($compra->update($validated->toArray())) {
+            return redirect()->route('compra.show', $compra);
         }
-        return redirect()->route('venta.update', $id);
+        return redirect()->route('compra.update', $id);
     }
 
     /**
@@ -114,24 +114,23 @@ class VentaController extends Controller
      */
     public function statistics ()
     {
-        $chartRegistros = $this->generateRegistersChart("Venta", "Ventas");
-        $chartEstado = $this->generateEnumChart('Venta', 'estado', "Estado", 'bar');
-        $chartFormaPago = $this->generateEnumChart('Venta', 'forma_pago', "FormaPago", 'bar');
+        $chartRegistros = $this->generateRegistersChart("Compra", "Compras");
+        $chartEstado = $this->generateEnumChart('Compra', 'estado', "Estado", 'bar');
 
-        return view('venta.statistics')->with(compact('chartRegistros', 'chartFormaPago', 'chartEstado'));
+        return view('compra.statistics')->with(compact('chartRegistros', 'chartEstado'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Venta  $venta
+     * @param  Compra  $compra
      * @return RedirectResponse
      * @throws Exception
      */
-    public function destroy (Venta $venta)
+    public function destroy (Compra $compra)
     {
-        $venta->delete();
-        return redirect()->route('venta.index');
+        $compra->delete();
+        return redirect()->route('compra.index');
     }
 
     /**
@@ -144,12 +143,13 @@ class VentaController extends Controller
     public function updateDataForAjax (Request $request, $id)
     {
         $input = $request->all();
-        $venta = Venta::findOrFail($id);
-        $venta->{$input['campo']} = $input['valor'];
-        if ($result = $venta->update()) {
+        $compra = Compra::findOrFail($id);
+        $compra->{$input['campo']} = $input['valor'];
+        if ($result = $compra->update()) {
             return response()->json(['status' => 200, 'success' => $result]);
         } else {
             return response()->json(['status' => 500, 'error' => $result]);
         }
     }
+
 }
