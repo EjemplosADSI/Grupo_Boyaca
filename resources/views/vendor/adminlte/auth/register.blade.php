@@ -68,7 +68,7 @@
 
         {{-- apellido --}}
         <div class="input-group mb-3">
-            <input type="text" name="apellido" class="form-control {{ $errors->has('apellido') ? 'is-invalid' : '' }}"
+            <input type="text" name="documento" class="form-control {{ $errors->has('documento') ? 'is-invalid' : '' }}"
                    value="{{ old('apellido') }}" placeholder="Apellidos">
             <div class="input-group-append">
                 <div class="input-group-text">

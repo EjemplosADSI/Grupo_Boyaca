@@ -15,7 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-})->middleware('auth');
+});
+
+/* Rutas para las estadisticas */
+Route::get('/departamento/statistics', 'DepartamentoController@statistics')->name('departamento.statistics');
+
+Route::resources([
+    'departamento' => 'DepartamentoController'
+]);
+
+/* Rutas para actualización por ajax */
+Route::post('/departamento/update_data/{id}', 'DepartamentoController@updateDataForAjax')->name('departamento.update_data');
 
 Auth::routes();
 

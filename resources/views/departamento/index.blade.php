@@ -1,3 +1,5 @@
+@php $nameObj = "Departamentos"; $singNameObj = "Departamento"; @endphp
+
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
@@ -7,11 +9,11 @@
 @stop
 
 @section('content')
-    <p>Bienvenido al Sistema de Control de Inventarios.</p>
+    <p>Gestionar Departamentos.</p>
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Title</h3>
+            <h3 class="card-title">Departamentos</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -21,7 +23,7 @@
             </div>
         </div>
         <div class="card-body">
-            Start creating your amazing application!
+            {{ $dataTable->table([],true) }}
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
@@ -37,9 +39,10 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+
 @stop
 
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
+@section('plugins.Datatables', true)
