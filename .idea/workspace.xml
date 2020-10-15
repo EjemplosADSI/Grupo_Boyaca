@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4434b9b-6076-4e45-8ffb-b6e525890c55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/DataTables/SucursalBodegaDataTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SucursalBodegasController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SucursalesBodegasController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/DetalleVentaStoreRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/SucursalBodega.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/SucursalBodegaFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/SucursalBodegasSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/SucursalesBodegasSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/DetalleVentaDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/DetalleVentaDataTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataTables/VentaDataTable" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataTables/VentaDataTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DetalleVentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DetalleVentaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VentaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VentaController.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,9 +188,12 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Migraciones_Laravel_5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -288,57 +279,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602714273399" />
-    <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602774114967">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="430" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1602774114967" />
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602795253637">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1602795253637" />
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602791114567">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602791114567" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602788076541">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602788076541" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602699799049">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602699799049" />
     <state width="206" height="457" key="HiddenNamespacesPopup" timestamp="1602702194630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="206" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1602702194630" />
-    <state x="483" y="87" key="NewPhpClassDialog" timestamp="1602794938344">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="483" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602794938344" />
-    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602793908859">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602793908859" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602788143207">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602788143207" />
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602772636209">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602772636209" />
+
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602763731263">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602763731263" />
+    <state x="53" y="0" width="704" height="487" key="dock-window-1" timestamp="1602773486334">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="53" y="0" width="704" height="487" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1602773486334" />
     <state x="484" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602687803488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="484" y="270" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602687803488" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1602777544303">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1602777544303" />
+
   </component>
 </project>

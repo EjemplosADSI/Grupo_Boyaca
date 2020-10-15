@@ -17,6 +17,6 @@ $factory->define(Empresa::class, function (Faker $faker) {
         'telefono' => $faker->phoneNumber,
         'correoElectronico' => $faker->email,
         'logo' => $faker->imageUrl(800, 600, 'cats'),
-        'estado' => $faker->randomElement(BasicStatus::getValues()),
+        'estado' => $faker->randomElement(BasicStatus::getValues())
     ];
 });

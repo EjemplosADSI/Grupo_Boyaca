@@ -66,18 +66,18 @@
             @endif
         </div>
 
-        {{-- apellido --}}
+        {{-- documento --}}
         <div class="input-group mb-3">
-            <input type="text" name="apellido" class="form-control {{ $errors->has('apellido') ? 'is-invalid' : '' }}"
-                   value="{{ old('apellido') }}" placeholder="Apellidos">
+            <input type="text" name="documento" class="form-control {{ $errors->has('documento') ? 'is-invalid' : '' }}"
+                   value="{{ old('documento') }}" placeholder="Documento">
             <div class="input-group-append">
                 <div class="input-group-text">
                     <span class="fas fa-user {{ config('adminlte.classes_auth_icon', '') }}"></span>
                 </div>
             </div>
-            @if($errors->has('apellido'))
+            @if($errors->has('documento'))
                 <div class="invalid-feedback">
-                    <strong>{{ $errors->first('apellido') }}</strong>
+                    <strong>{{ $errors->first('documento') }}</strong>
                 </div>
             @endif
         </div>
