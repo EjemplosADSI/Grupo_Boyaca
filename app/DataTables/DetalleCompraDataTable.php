@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 use App\DetalleCompra;
+use App\Producto;
 use App\Traits\GeneralConfigExcelDataTables;
 use App\Traits\GeneralValuesDataTables;
 use Illuminate\Contracts\View\View;
@@ -37,9 +38,9 @@ class DetalleCompraDataTable extends DataTable implements FromView, ShouldAutoSi
     public function __construct()
     {
         $this->defaultProperties = collect([
-            'namePluralModel' => 'DetallesCompra',
-            'nameSingularModel' => 'DetallesCompra',
-            'routeNew' => route('detallescompra.create')
+            'namePluralModel' => 'DetalleCompras',
+            'nameSingularModel' => 'DetalleCompra',
+            'routeNew' => route('detallecompra.create')
         ]);
     }
 
@@ -55,11 +56,11 @@ class DetalleCompraDataTable extends DataTable implements FromView, ShouldAutoSi
             ->eloquent($query)
             ->addColumn('action', function ($detallescompra) {
                 return
-                    '<a role="button" href="'.route('detallescompra.edit', [$detallescompra->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
-                    <a role="button" href="'.route('detallescompra.show', [$detallescompra ->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
+                    '<a role="button" href="'.route('detallecompra.edit', [$detallescompra->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
+                    <a role="button" href="'.route('detallecompra.show', [$detallescompra ->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
             })
-            ->addColumn('estado', function ($detallescompra) {
-                return "<a class='badge btn-change-status ".(($detallescompra->estado == 'Pendiente') ? "badge-success" : "badge-warning")."' data-item-id='".$compra->id."' data-item-date='".$compra->fecha."' data-item-status='".$compra->estado."' href='#'>$compra->estado</a>";
+            ->addColumn('producto_id', function ( Producto $producto) {
+                return "<a class='badge btn-change-status ".route('producto.show,'[$producto->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$producto->nombre.'</a>';
             })
             ->rawColumns(['action','estado']);
     }
@@ -67,10 +68,10 @@ class DetalleCompraDataTable extends DataTable implements FromView, ShouldAutoSi
     /**
      * Get query source of dataTable.
      *
-     * @param  Compra  $model
+     * @param   DetalleCompra  $model
      * @return Builder
      */
-    public function query(Compra $model)
+    public function query(DetalleCompra  $model)
     {
         if($this->queryBuilder != null){
             return $this->queryBuilder;
@@ -114,12 +115,12 @@ class DetalleCompraDataTable extends DataTable implements FromView, ShouldAutoSi
             Column::make('cantidad')->addClass('text-break'),
             Column::computed('producto_id')
                 ->addClass('text-center')->name('producto.nombre')
-                ->title('user')->searchable(true)
+                ->title('producto')->searchable(true)
                 ->orderable(true)->printable(true)
                 ->exportable(true)->render(null),
             Column::computed('compra_id')
                 ->addClass('text-center')->name('compra.valor_total')
-                ->title('bodega')->searchable(true)
+                ->title('valor_total')->searchable(true)
                 ->orderable(true)->printable(true)
                 ->exportable(true)->render(null),
             Column::computed('estado')->addClass('text-break text-center d-md-table-cell')
@@ -141,7 +142,7 @@ class DetalleCompraDataTable extends DataTable implements FromView, ShouldAutoSi
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new D(), $this->getFilename() . $ext, $this->excelWriter);
+        return Excel::download(new DetalleCompra(), $this->getFilename() . $ext, $this->excelWriter);
     }
 
     /**
