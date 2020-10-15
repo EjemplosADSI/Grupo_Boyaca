@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\EmpresaDataTable;
-use App\Empresa;
-use App\Http\Requests\EmpresaStoreRequest;
-use App\Municipio;
+use App\Bodega;
+use App\DataTables\BodegaDataTable;
+use App\Http\Requests\BodegaStoreRequest;
 use App\Traits\ChartConfigController;
 use Exception;
 use Illuminate\Contracts\Foundation\Application;
@@ -15,7 +14,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use View;
 
-class EmpresaController extends Controller
+class BodegaController extends Controller
 {
     use ChartConfigController;
 
@@ -33,12 +32,12 @@ class EmpresaController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param EmpresaDataTable $dataTable
+     * @param BodegaDataTable $dataTable
      * @return View
      */
-    public function index (EmpresaDataTable $dataTable)
+    public function index (BodegaDataTable $dataTable)
     {
-        return $dataTable->render('empresa.index');
+        return $dataTable->render('bodega.index');
     }
 
     /**
@@ -48,22 +47,22 @@ class EmpresaController extends Controller
      */
     public function create ()
     {
-        $empresa = new Empresa();
-        return view("empresa.create", compact('empresa'));
+        $bodega = new Bodega();
+        return view("bodega.create", compact('bodega'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param EmpresaStoreRequest $request
+     * @param BodegaStoreRequest $request
      * @return RedirectResponse
      */
-    public function store (EmpresaStoreRequest $request)
+    public function store (BodegaStoreRequest $request)
     {
         $validated = $request->validated();
-        $empresa = new Empresa($validated);
-        if ($empresa->save()) {
-            return redirect()->route('empresa.show', $empresa);
+        $bodega = new Bodega($validated);
+        if ($bodega->save()) {
+            return redirect()->route('bodega.show', $bodega);
         }
         return redirect()->back();
     }
@@ -71,41 +70,41 @@ class EmpresaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  EmpresaDataTable  $dataTable
-     * @param  Empresa  $empresa
+     * @param  BodegaDataTable  $dataTable
+     * @param  Bodega  $bodega
      * @return Factory|\Illuminate\View\View
      */
-    public function show (EmpresaDataTable $dataTable, Empresa $empresa)
+    public function show (BodegaDataTable $dataTable, Bodega $bodega)
     {
-        return view('empresa.show', compact('empresa'));
+        return view('bodega.show', compact('bodega'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Empresa  $empresa
+     * @param  Bodega  $bodega
      * @return Factory|\Illuminate\View\View
      */
-    public function edit(Empresa $empresa)
+    public function edit(Bodega $bodega)
     {
-        return view('empresa.edit')->with('empresa', $empresa);
+        return view('bodega.edit')->with('bodega', $bodega);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param EmpresaStoreRequest $request
+     * @param BodegaStoreRequest $request
      * @param                          $id
      * @return RedirectResponse
      */
-    public function update (EmpresaStoreRequest $request, $id)
+    public function update (BodegaStoreRequest $request, $id)
     {
         $validated = collect($request->validated());
-        $empresa = Empresa::findOrFail($id);
-        if ($empresa->update($validated->toArray())) {
-            return redirect()->route('empresa.show', $empresa);
+        $bodega = Bodega::findOrFail($id);
+        if ($bodega->update($validated->toArray())) {
+            return redirect()->route('bodega.show', $bodega);
         }
-        return redirect()->route('empresa.update', $id);
+        return redirect()->route('bodega.update', $id);
     }
 
     /**
@@ -115,23 +114,23 @@ class EmpresaController extends Controller
      */
     public function statistics ()
     {
-        $chartRegistros = $this->generateRegistersChart("Empresa", "Empresas");
-        $chartEstado = $this->generateEnumChart('Empresa', 'estado', "Estado", 'bar');
+        $chartRegistros = $this->generateRegistersChart("Bodega", "Bodega");
+        $chartEstado = $this->generateEnumChart('Bodega', 'estado', "Estado", 'bar');
 
-        return view('empresa.statistics')->with(compact('chartRegistros', 'chartRegion', 'chartEstado'));
+        return view('bodega.statistics')->with(compact('chartRegistros', 'chartEstado'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Empresa  $empresa
+     * @param  Bodega  $bodega
      * @return RedirectResponse
      * @throws Exception
      */
-    public function destroy (Empresa $empresa)
+    public function destroy (Bodega $bodega)
     {
-        $empresa->delete();
-        return redirect()->route('empresa.index');
+        $bodega->delete();
+        return redirect()->route('bodega.index');
     }
 
     /**
@@ -144,9 +143,9 @@ class EmpresaController extends Controller
     public function updateDataForAjax (Request $request, $id)
     {
         $input = $request->all();
-        $empresa = Empresa::findOrFail($id);
-        $empresa->{$input['campo']} = $input['valor'];
-        if ($result = $empresa->update()) {
+        $bodega = Bodega::findOrFail($id);
+        $bodega->{$input['campo']} = $input['valor'];
+        if ($result = $bodega->update()) {
             return response()->json(['status' => 200, 'success' => $result]);
         } else {
             return response()->json(['status' => 500, 'error' => $result]);

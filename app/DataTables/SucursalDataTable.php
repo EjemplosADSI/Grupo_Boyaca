@@ -2,11 +2,12 @@
 
 namespace App\DataTables;
 
-use App\Departamento;
 use App\Empresa;
 use App\Municipio;
+use App\Sucursal;
 use App\Traits\GeneralConfigExcelDataTables;
 use App\Traits\GeneralValuesDataTables;
+use App\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -26,7 +27,7 @@ use Yajra\DataTables\Services\DataTable;
 //use Maatwebsite\Excel\Facades\Excel;
 //use Maatwebsite\Excel\Facades\Excel;
 
-class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, WithEvents, WithTitle
+class SucursalDataTable extends DataTable implements FromView, ShouldAutoSize, WithEvents, WithTitle
 {
     use GeneralValuesDataTables;
     use GeneralConfigExcelDataTables;
@@ -35,14 +36,14 @@ class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, Wi
     public $queryBuilder = null;
 
     /**
-     * EmpresaDataTable constructor.
+     * SucursalDataTable constructor.
      */
     public function __construct()
     {
         $this->defaultProperties = collect([
-            'namePluralModel' => 'Empresas',
-            'nameSingularModel' => 'Empresa',
-            'routeNew' => route('empresa.create')
+            'namePluralModel' => 'Sucursales',
+            'nameSingularModel' => 'Sucursal',
+            'routeNew' => route('sucursal.create')
         ]);
     }
 
@@ -56,27 +57,35 @@ class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, Wi
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', function ($empresa) {
+            ->addColumn('action', function ($sucursal) {
                 return
-                    '<a role="button" href="'.route('empresa.edit', [$empresa->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
-                    <a role="button" href="'.route('empresa.show', [$empresa->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
+                    '<a role="button" href="'.route('sucursal.edit', [$sucursal->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
+                    <a role="button" href="'.route('sucursal.show', [$sucursal->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
             })
-            ->addColumn('estado', function ($empresa) {
-                return "<a class='badge btn-change-status ".(($empresa->estado == 'Activo') ? "badge-success" : "badge-warning")."' data-item-id='".$empresa->id."' data-item-name='".$empresa->nombre."' data-item-status='".$empresa->estado."' href='#'>$empresa->estado</a>";
-            })
+
             ->addColumn('municipio', function (Municipio $municipio) {
                 return '<a class="badge badge-info" href="'.route('municipio.show', [$municipio->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$municipio->nombre.'</a>';
             })
-            ->rawColumns(['action','municipio','estado']);
+
+            ->addColumn('jefe_id', function (User $user) {
+                return '<a class="badge badge-info" href="'.route('user.show', [$user->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$user->nombre.'</a>';
+            })
+
+            ->addColumn('empresa', function (Empresa $empresa) {
+                return '<a class="badge badge-info" href="'.route('empresa.show', [$empresa->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$empresa->nombre.'</a>';
+            })
+
+
+            ->rawColumns(['action','municipio','jefe_id', 'estado']);
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param  Empresa  $model
+     * @param  Sucursal  $model
      * @return Builder
      */
-    public function query(Empresa $model)
+    public function query(Sucursal $model)
     {
         if($this->queryBuilder != null){
             return $this->queryBuilder;
@@ -117,7 +126,6 @@ class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, Wi
                 ->title('#')
                 ->addClass('d-none d-md-table-cell text-center'),
             Column::make('nombre')->addClass('text-break'),
-            Column::make('nit')->addClass('text-break'),
             Column::computed('municipio')
                 ->addClass('text-center')->name('municipio.nombre')
                 ->title('Municipio')->searchable(true)
@@ -125,8 +133,16 @@ class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, Wi
                 ->exportable(true)->render(null),
             Column::make('direccion')->addClass('text-break'),
             Column::make('telefono')->addClass('text-break'),
-            Column::make('correoElectronico')->addClass('text-break'),
-            Column::make('logo')->addClass('text-break'),
+            Column::computed('jefe_id')
+                ->addClass('text-center')->name('jefe_id.nombre')
+                ->title('Jefe')->searchable(true)
+                ->orderable(true)->printable(true)
+                ->exportable(true)->render(null),
+            Column::computed('empresa_id')
+                ->addClass('text-center')->name('empresa_id.nombre')
+                ->title('Empresa')->searchable(true)
+                ->orderable(true)->printable(true)
+                ->exportable(true)->render(null),
             Column::computed('estado')->addClass('text-break text-center d-md-table-cell')
                 ->name('estado')->searchable(true)
                 ->orderable(true)->printable(true)
@@ -146,7 +162,7 @@ class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, Wi
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new EmpresaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
+        return Excel::download(new SucursalDataTable(), $this->getFilename() . $ext, $this->excelWriter);
     }
 
     /**
