@@ -35,7 +35,7 @@ class EmpresaDataTable extends DataTable implements FromView, ShouldAutoSize, Wi
     public $queryBuilder = null;
 
     /**
-     * DepartamentoDataTable constructor.
+     * EmpresaDataTable constructor.
      */
     public function __construct()
     {

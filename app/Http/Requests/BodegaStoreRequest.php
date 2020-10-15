@@ -13,7 +13,7 @@ use Waavi\Sanitizer\Laravel\SanitizesInput;
  * @property mixed id
  */
 
-class CategoriaStoreRequest extends FormRequest
+class BodegaStoreRequest extends FormRequest
 {
 
     use SanitizesInput;
@@ -51,8 +51,11 @@ class CategoriaStoreRequest extends FormRequest
     {
         $basicValidation = [
             'id'            => ['required', 'integer'],
-            'nombre'        => ['required', 'string', 'unique:categorias,nombre,'.$objectId],
-            'descripcion'     => ['required', 'string', 'min:0', 'max:300'],
+            'nombre'        => ['required', 'string', 'unique:bodegas,nombre,'.$objectId],
+            'municipio_id'  => ['required', 'integer', 'exists:municipios,id'],
+            'direccion'     => ['required', 'string', 'min:5', 'max:60'],
+            'telefono'      => ['required', 'numeric', 'min:0', 'digits_between:5,13'],
+            'jefe_id'  => 'trim|escape|digit',
             'estado'        => ['required', 'string', Rule::in(BasicStatus::getValues())],
             'created_at'    => 'nullable|date',
             'updated_at'    => 'nullable|date',
@@ -69,14 +72,14 @@ class CategoriaStoreRequest extends FormRequest
             case 'POST':
             {
                 $basicValidation['id'] = ['required', 'integer',
-                    Rule::unique('categorias','id') ];
+                    Rule::unique('bodegas','id') ];
                 break;
             }
             //case 'PUT':
             case 'PATCH':
             {
                 $basicValidation['id'] = ['required', 'integer',
-                    Rule::unique('categorias', 'id')->ignore($objectId) ];
+                    Rule::unique('bodegas', 'id')->ignore($objectId) ];
                 break;
             }
             default:break;
@@ -95,7 +98,10 @@ class CategoriaStoreRequest extends FormRequest
         return [
             'id'            => 'Id',
             'nombre'        => 'Nombre',
-            'descripcion'  => 'Descripcion',
+            'municipio_id'  => 'Municipio',
+            'direccion'     => 'Direccion',
+            'telefono'      => 'Telefono',
+            'jefe_id'       => 'Jefe',
             'estado'        => 'Estado',
             'created_at'    => 'Creado',
             'updated_at'    => 'Actualizado'
@@ -112,7 +118,10 @@ class CategoriaStoreRequest extends FormRequest
         return [
             'id'            => 'trim|escape',
             'nombre'        => 'trim|escape|uppercase',
-            'descripcion'   => 'trim|escape|lowercase',
+            'municipio_id'  => 'trim|escape|digit',
+            'direccion'     => 'trim|escape|capitalize',
+            'telefono'      => 'trim|escape|digit',
+            'jefe_id'       => 'trim|escape|digit',
             'estado'        => 'trim|escape|capitalize',
             'created_at'    => 'trim|escape',
             'updated_at'    => 'trim|escape'

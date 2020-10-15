@@ -2,9 +2,12 @@
 
 namespace App\DataTables;
 
-use App\Categoria;
+use App\Empresa;
+use App\Municipio;
+use App\Sucursal;
 use App\Traits\GeneralConfigExcelDataTables;
 use App\Traits\GeneralValuesDataTables;
+use App\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -24,7 +27,7 @@ use Yajra\DataTables\Services\DataTable;
 //use Maatwebsite\Excel\Facades\Excel;
 //use Maatwebsite\Excel\Facades\Excel;
 
-class CategoriaDataTable extends DataTable implements FromView, ShouldAutoSize, WithEvents, WithTitle
+class SucursalDataTable extends DataTable implements FromView, ShouldAutoSize, WithEvents, WithTitle
 {
     use GeneralValuesDataTables;
     use GeneralConfigExcelDataTables;
@@ -33,14 +36,14 @@ class CategoriaDataTable extends DataTable implements FromView, ShouldAutoSize, 
     public $queryBuilder = null;
 
     /**
-     * CategoriaDataTable constructor.
+     * SucursalDataTable constructor.
      */
     public function __construct()
     {
         $this->defaultProperties = collect([
-            'namePluralModel' => 'Categorias',
-            'nameSingularModel' => 'Categoria',
-            'routeNew' => route('categoria.create')
+            'namePluralModel' => 'Sucursales',
+            'nameSingularModel' => 'Sucursal',
+            'routeNew' => route('sucursal.create')
         ]);
     }
 
@@ -54,25 +57,35 @@ class CategoriaDataTable extends DataTable implements FromView, ShouldAutoSize, 
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', function ($categoria) {
+            ->addColumn('action', function ($sucursal) {
                 return
-                    '<a role="button" href="'.route('categoria.edit', [$categoria->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
-                    <a role="button" href="'.route('categoria.show', [$categoria->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
-            })
-            ->addColumn('estado', function ($categoria) {
-                return "<a class='badge btn-change-status ".(($categoria->estado == 'Activo') ? "badge-success" : "badge-warning")."' data-item-id='".$categoria->id."' data-item-name='".$categoria->nombre."' data-item-status='".$categoria->estado."' href='#'>$categoria->estado</a>";
+                    '<a role="button" href="'.route('sucursal.edit', [$sucursal->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
+                    <a role="button" href="'.route('sucursal.show', [$sucursal->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
             })
 
-            ->rawColumns(['action','estado']);
+            ->addColumn('municipio', function (Municipio $municipio) {
+                return '<a class="badge badge-info" href="'.route('municipio.show', [$municipio->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$municipio->nombre.'</a>';
+            })
+
+            ->addColumn('jefe_id', function (User $user) {
+                return '<a class="badge badge-info" href="'.route('user.show', [$user->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$user->nombre.'</a>';
+            })
+
+            ->addColumn('empresa', function (Empresa $empresa) {
+                return '<a class="badge badge-info" href="'.route('empresa.show', [$empresa->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$empresa->nombre.'</a>';
+            })
+
+
+            ->rawColumns(['action','municipio','jefe_id', 'estado']);
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param  Categoria  $model
+     * @param  Sucursal  $model
      * @return Builder
      */
-    public function query(Categoria $model)
+    public function query(Sucursal $model)
     {
         if($this->queryBuilder != null){
             return $this->queryBuilder;
@@ -109,20 +122,31 @@ class CategoriaDataTable extends DataTable implements FromView, ShouldAutoSize, 
                 ->orderable(false)          ->searchable(false)
                 ->exportable(false)         ->printable(false)
                 ->footer('Acciones'),
-
             Column::make('id')
                 ->title('#')
                 ->addClass('d-none d-md-table-cell text-center'),
-
             Column::make('nombre')->addClass('text-break'),
-
-            Column::make('descripcion')->addClass('text-break'),
-
+            Column::computed('municipio')
+                ->addClass('text-center')->name('municipio.nombre')
+                ->title('Municipio')->searchable(true)
+                ->orderable(true)->printable(true)
+                ->exportable(true)->render(null),
+            Column::make('direccion')->addClass('text-break'),
+            Column::make('telefono')->addClass('text-break'),
+            Column::computed('jefe_id')
+                ->addClass('text-center')->name('jefe_id.nombre')
+                ->title('Jefe')->searchable(true)
+                ->orderable(true)->printable(true)
+                ->exportable(true)->render(null),
+            Column::computed('empresa_id')
+                ->addClass('text-center')->name('empresa_id.nombre')
+                ->title('Empresa')->searchable(true)
+                ->orderable(true)->printable(true)
+                ->exportable(true)->render(null),
             Column::computed('estado')->addClass('text-break text-center d-md-table-cell')
                 ->name('estado')->searchable(true)
                 ->orderable(true)->printable(true)
                 ->exportable(true)->render(null),
-
             Column::make('created_at')->title('Creado')->addClass('d-none d-md-table-cell'),
             Column::make('updated_at')->title('Actualizado')->addClass('d-none d-md-table-cell'),
         ];
@@ -138,7 +162,7 @@ class CategoriaDataTable extends DataTable implements FromView, ShouldAutoSize, 
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new CategoriaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
+        return Excel::download(new SucursalDataTable(), $this->getFilename() . $ext, $this->excelWriter);
     }
 
     /**
