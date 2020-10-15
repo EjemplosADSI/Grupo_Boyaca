@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Venta;
 use Illuminate\Http\Request;
-use App\DataTables\VentaDataTable;
+use App\DataTables\DetalleVentaDataTable;
 use App\Http\Requests\VentaStoreRequest;
 use App\Traits\ChartConfigController;
 use Exception;
@@ -32,10 +32,10 @@ class VentaController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @param VentaDataTable $dataTable
+     * @param DetalleVentaDataTable $dataTable
      * @return View
      */
-    public function index (VentaDataTable $dataTable)
+    public function index (DetalleVentaDataTable $dataTable)
     {
         return $dataTable->render('venta.index');
     }
@@ -47,7 +47,7 @@ class VentaController extends Controller
      */
     public function create ()
     {
-        $empresa = new Venta();
+        $venta = new Venta();
         return view("venta.create", compact('venta'));
     }
 
@@ -70,11 +70,11 @@ class VentaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  VentaDataTable  $dataTable
+     * @param  DetalleVentaDataTable  $dataTable
      * @param  Venta  $venta
      * @return Factory|\Illuminate\View\View
      */
-    public function show (VentaDataTable $dataTable, Venta $venta)
+    public function show (DetalleVentaDataTable $dataTable, Venta $venta)
     {
         return view('venta.show', compact('venta'));
     }
@@ -102,7 +102,7 @@ class VentaController extends Controller
         $validated = collect($request->validated());
         $venta = Venta::findOrFail($id);
         if ($venta->update($validated->toArray())) {
-            return redirect()->route('empresa.show', $venta);
+            return redirect()->route('venta.show', $venta);
         }
         return redirect()->route('venta.update', $id);
     }
