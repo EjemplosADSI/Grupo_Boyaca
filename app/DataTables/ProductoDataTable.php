@@ -143,7 +143,7 @@ class ProductoDataTable extends DataTable implements FromView, ShouldAutoSize, W
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new EmpresaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
+        return Excel::download(new ProductoDataTable(), $this->getFilename() . $ext, $this->excelWriter);
     }
 
     /**
