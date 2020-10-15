@@ -12,6 +12,6 @@ $factory->define(Municipio::class, function (Faker $faker) {
         'id' => $faker->unique()->numberBetween(1,50000),
         'nombre' => $faker->name(4),
         'departamento_id' => Departamento::all()->random()->id,
-        'estado' => $faker->randomElement(BasicStatus::getValues()),
+        'estado' => $faker->randomElement(BasicStatus::getValues())
     ];
 });
