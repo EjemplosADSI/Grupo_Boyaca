@@ -55,6 +55,7 @@ class Compra extends Model
         'valor_total',
         'proveedor_id',
         'bodega_id',
+        'estado'
     ];
 
     protected $casts = [

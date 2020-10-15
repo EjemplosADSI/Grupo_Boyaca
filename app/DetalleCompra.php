@@ -55,6 +55,7 @@ class DetalleCompra extends Model
         'cantidad',
         'producto_id',
         'compra_id',
+        'estado'
     ];
 
     protected $casts = [

@@ -2,8 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Bodega;
 use App\Compra;
 use App\Enums\EstadoCompra;
+use App\User;
 use Faker\Generator as Faker;
 
 

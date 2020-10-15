@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+use App\Bodega;
 use App\Compra;
 use App\Traits\GeneralConfigExcelDataTables;
 use App\Traits\GeneralValuesDataTables;
@@ -33,12 +34,12 @@ class CompraDataTable extends DataTable implements FromView, ShouldAutoSize, Wit
     public $queryBuilder = null;
 
     /**
-     * DepartamentoDataTable constructor.
+     * CompraDataTable constructor.
      */
     public function __construct()
     {
         $this->defaultProperties = collect([
-            'namePluralModel' => 'Compra',
+            'namePluralModel' => 'Compras',
             'nameSingularModel' => 'Compra',
             'routeNew' => route('compra.create')
         ]);
@@ -59,10 +60,19 @@ class CompraDataTable extends DataTable implements FromView, ShouldAutoSize, Wit
                     '<a role="button" href="'.route('compra.edit', [$compra->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
                     <a role="button" href="'.route('compra.show', [$compra  ->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
             })
+
+            ->addColumn('bodega', function (Bodega $bodega) {
+                return '<a class="badge badge-info" href="'.route('bodega.show', [$bodega->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$bodega->nombre.'</a>';
+            })
+
+            ->addColumn('proveedor_id', function (User $user) {
+                return '<a class="badge badge-info" href="'.route('user.show', [$user->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$user->nombre.'</a>';
+            })
+
             ->addColumn('estado', function ($compra) {
                 return "<a class='badge btn-change-status ".(($compra->estado == 'Pendiente') ? "badge-success" : "badge-warning")."' data-item-id='".$compra->id."' data-item-date='".$compra->fecha."' data-item-status='".$compra->estado."' href='#'>$compra->estado</a>";
             })
-            ->rawColumns(['action','estado']);
+            ->rawColumns(['action','bodega','proveedor_id','estado']);
     }
 
     /**
