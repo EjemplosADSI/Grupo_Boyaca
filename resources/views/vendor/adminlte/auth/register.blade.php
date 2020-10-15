@@ -17,18 +17,67 @@
     <form action="{{ $register_url }}" method="post">
         {{ csrf_field() }}
 
-        {{-- Name field --}}
+        {{-- nombre --}}
         <div class="input-group mb-3">
-            <input type="text" name="name" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}"
-                   value="{{ old('name') }}" placeholder="{{ __('adminlte::adminlte.full_name') }}" autofocus>
+            <input type="text" minlength="2" maxlength="80" name="nombre" class="form-control {{ $errors->has('nombre') ? 'is-invalid' : '' }}"
+                value="{{ old('nombre') }}" placeholder="Nombres" required
+                   autocomplete = 'nombre' style="text-transform: capitalize"
+                   autofocus>
             <div class="input-group-append">
                 <div class="input-group-text">
                     <span class="fas fa-user {{ config('adminlte.classes_auth_icon', '') }}"></span>
                 </div>
             </div>
-            @if($errors->has('name'))
+            @if($errors->has('nombre'))
                 <div class="invalid-feedback">
-                    <strong>{{ $errors->first('name') }}</strong>
+                    <strong>{{ $errors->first('nombre') }}</strong>
+                </div>
+            @endif
+        </div>
+
+        {{-- apellido --}}
+        <div class="input-group mb-3">
+            <input type="text" minlength="2" maxlength="80" name="apellido" class="form-control {{ $errors->has('apellido') ? 'is-invalid' : '' }}"
+                   autocomplete = 'apellido' style="text-transform: capitalize" value="{{ old('apellido') }}" placeholder="Apellidos">
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-user {{ config('adminlte.classes_auth_icon', '') }}"></span>
+                </div>
+            </div>
+            @if($errors->has('apellido'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('apellido') }}</strong>
+                </div>
+            @endif
+        </div>
+
+        {{-- tipo_documento --}}
+        <div class="mb-3">
+                <select class="form-control select2" style="width: 100%;">
+                    <option selected="selected">Tipo Documento</option>
+                    @foreach(\App\Enums\TipoDocumento::getValues() as $option => $data)
+                        <option value="{{ $data }}" >{{ $data }}</option>
+                    @endforeach
+                </select>
+            @if($errors->has('tipo_documento'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('tipo_documento') }}</strong>
+                </div>
+            @endif
+        </div>
+
+        {{-- apellido --}}
+        <div class="input-group mb-3">
+            <input type="text" name="apellido" class="form-control {{ $errors->has('apellido') ? 'is-invalid' : '' }}"
+                   value="{{ old('apellido') }}" placeholder="Apellidos">
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-user {{ config('adminlte.classes_auth_icon', '') }}"></span>
+                </div>
+            </div>
+            @if($errors->has('apellido'))
+                <div class="invalid-feedback">
+                    <strong>{{ $errors->first('apellido') }}</strong>
                 </div>
             @endif
         </div>
