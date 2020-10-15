@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4434b9b-6076-4e45-8ffb-b6e525890c55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Enums/EstadoCompra.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/EstadoVenta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Enums/FormaPago.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_220014_create_venta_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_14_224632_create_compra_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Grupo_Boyaca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Grupo_Boyaca.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DataTables/EmpresaDataTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SucursalController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/EmpresaStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/MunicipioStoreRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Sucursal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/MER.mwb.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/SucursalFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SucursalSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Empresa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Empresa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmpresaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmpresaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/MER.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/database/MER.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/EmpresaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EmpresaFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +159,30 @@
       <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
       <path value="$PROJECT_DIR$/vendor/waavi/sanitizer" />
       <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
+      <path value="$PROJECT_DIR$/vendor/davejamesmiller/laravel-breadcrumbs" />
+      <path value="$PROJECT_DIR$/vendor/balping/json-raw-encoder" />
+      <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/vendor/laraveles/spanish" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-collection-macros" />
+      <path value="$PROJECT_DIR$/vendor/consoletvs/charts" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-telescope-toolbar" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/bcmath_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/moontoast/math" />
     </include_path>
   </component>
   <component name="ProjectId" id="1isDSN7lH4WrMk8swlbG1TBa4u1" />
@@ -189,6 +219,7 @@
       <workItem from="1602687406455" duration="2090000" />
       <workItem from="1602690114481" duration="3115000" />
       <workItem from="1602699783412" duration="12634000" />
+      <workItem from="1602763221066" duration="6277000" />
     </task>
     <task id="LOCAL-00001" summary="* Primer Commit con estructura del proyecto de laravel">
       <created>1602687554039</created>
@@ -211,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602707795388</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="* Migracion de Ventas y Compras&#10;* Enums FormaPago.php, EstadoVenta.php y EstadoCompra.php">
+      <created>1602716366021</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602716366021</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,17 +262,22 @@
     <MESSAGE value="* Primer Commit con estructura del proyecto de laravel" />
     <MESSAGE value="* Migracion de Departamentos" />
     <MESSAGE value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Migracion de Departamentos, Municipios, empresa, sucursal.&#10;* Creacion de enums" />
+    <MESSAGE value="* Migracion de Ventas y Compras&#10;* Enums FormaPago.php, EstadoVenta.php y EstadoCompra.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Migracion de Ventas y Compras&#10;* Enums FormaPago.php, EstadoVenta.php y EstadoCompra.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602714273399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602714273399" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602710661390">
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602769279017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602707794598" />
+    <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1602769279017" />
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1602716365317">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1602716365317" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1602699799049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -247,18 +290,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="483" y="87" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1602702045224" />
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602716303321">
+    <state x="517" y="287" key="NewPhpFileDialog" timestamp="1602766989007">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602716303321" />
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602716155383">
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1602766989007" />
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2" timestamp="1602716371963">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602716155383" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602687605205">
+    <state x="275" y="84" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1602716371963" />
+    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602765239815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602687605205" />
+    <state x="537" y="125" width="316" height="477" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1602765239815" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602763731263">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1602763731263" />
     <state x="484" y="270" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1602687803488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
