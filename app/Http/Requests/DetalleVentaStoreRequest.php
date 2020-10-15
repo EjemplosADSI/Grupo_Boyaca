@@ -2,8 +2,11 @@
 
 namespace App\Http\Requests;
 
-use App\Enums\BasicStatus;
+use App\Enums\EstadoVenta;
+use App\Enums\FormaPago;
 use App\Traits\GeneralMethodsStoreRequest;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
@@ -13,7 +16,7 @@ use Waavi\Sanitizer\Laravel\SanitizesInput;
  * @property mixed id
  */
 
-class CategoriaStoreRequest extends FormRequest
+class DetalleVentaStoreRequest extends FormRequest
 {
 
     use SanitizesInput;
@@ -50,13 +53,15 @@ class CategoriaStoreRequest extends FormRequest
     public function arrayRules(string $method, int $objectId) : array
     {
         $basicValidation = [
-            'id'            => ['required', 'integer'],
-            'nombre'        => ['required', 'string', 'unique:categorias,nombre,'.$objectId],
-            'descripcion'     => ['required', 'string', 'min:0', 'max:300'],
-            'estado'        => ['required', 'string', Rule::in(BasicStatus::getValues())],
-            'created_at'    => 'nullable|date',
-            'updated_at'    => 'nullable|date',
-            'deleted_at'    => 'nullable|date'
+            'id'                => ['required', 'integer'],
+            'valor_unitario'    => ['required', 'numeric'],
+            'cantidad'          => ['required', 'integer'],
+            'producto_id'       => ['required', 'integer', 'exists:productos,id'],
+            'venta_id'       => ['required', 'integer', 'exists:ventas,id'],
+            'estado'            => ['required', 'string', Rule::in(EstadoVenta::getValues())],
+            'created_at'        => 'nullable|date',
+            'updated_at'        => 'nullable|date',
+            'deleted_at'        => 'nullable|date'
         ];
 
         switch($method)
@@ -69,14 +74,14 @@ class CategoriaStoreRequest extends FormRequest
             case 'POST':
             {
                 $basicValidation['id'] = ['required', 'integer',
-                    Rule::unique('categorias','id') ];
+                    Rule::unique('detalle_ventas','id') ];
                 break;
             }
             //case 'PUT':
             case 'PATCH':
             {
                 $basicValidation['id'] = ['required', 'integer',
-                    Rule::unique('categorias', 'id')->ignore($objectId) ];
+                    Rule::unique('detalle_ventas', 'id')->ignore($objectId) ];
                 break;
             }
             default:break;
@@ -93,12 +98,15 @@ class CategoriaStoreRequest extends FormRequest
     public function attributes() : array
     {
         return [
-            'id'            => 'Id',
-            'nombre'        => 'Nombre',
-            'descripcion'  => 'Descripcion',
-            'estado'        => 'Estado',
-            'created_at'    => 'Creado',
-            'updated_at'    => 'Actualizado'
+            'id'         => 'Id',
+            'Valor_unitario'=> 'Valor Unitario',
+            'descuento' => 'Descuento',
+            'cantidad'=> 'Cantidad',
+            'producto_id'=> 'Producto',
+            'venta_id' => 'Venta',
+            'estado'     => 'Estado',
+            'created_at' => 'Creado',
+            'updated_at' => 'Actualizado'
         ];
     }
 
@@ -110,12 +118,15 @@ class CategoriaStoreRequest extends FormRequest
     public function filters() : array
     {
         return [
-            'id'            => 'trim|escape',
-            'nombre'        => 'trim|escape|uppercase',
-            'descripcion'   => 'trim|escape|lowercase',
-            'estado'        => 'trim|escape|capitalize',
-            'created_at'    => 'trim|escape',
-            'updated_at'    => 'trim|escape'
+            'id'             => 'trim|escape',
+            'valor_unitario' => 'trim|escape|digit',
+            'descuento'      => 'trim|escape|digit',
+            'cantidad'       => 'trim|escape|digit',
+            'producto_id'    => 'trim|escape|digit',
+            'venta_id'       => 'trim|escape|digit',
+            'estado'         => 'trim|escape|capitalize',
+            'created_at'     => 'trim|escape',
+            'updated_at'     => 'trim|escape'
         ];
     }
 

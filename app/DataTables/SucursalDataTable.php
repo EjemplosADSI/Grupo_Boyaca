@@ -2,12 +2,12 @@
 
 namespace App\DataTables;
 
-
+use App\Empresa;
+use App\Municipio;
 use App\Sucursal;
 use App\Traits\GeneralConfigExcelDataTables;
 use App\Traits\GeneralValuesDataTables;
 use App\User;
-use App\Venta;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
 use Maatwebsite\Excel\Concerns\FromView;
@@ -27,7 +27,7 @@ use Yajra\DataTables\Services\DataTable;
 //use Maatwebsite\Excel\Facades\Excel;
 //use Maatwebsite\Excel\Facades\Excel;
 
-class VentaDataTable extends DataTable implements FromView, ShouldAutoSize, WithEvents, WithTitle
+class SucursalDataTable extends DataTable implements FromView, ShouldAutoSize, WithEvents, WithTitle
 {
     use GeneralValuesDataTables;
     use GeneralConfigExcelDataTables;
@@ -36,14 +36,14 @@ class VentaDataTable extends DataTable implements FromView, ShouldAutoSize, With
     public $queryBuilder = null;
 
     /**
-     * VentaDataTable constructor.
+     * SucursalDataTable constructor.
      */
     public function __construct()
     {
         $this->defaultProperties = collect([
-            'namePluralModel' => 'Ventas',
-            'nameSingularModel' => 'Venta',
-            'routeNew' => route('venta.create')
+            'namePluralModel' => 'Sucursales',
+            'nameSingularModel' => 'Sucursal',
+            'routeNew' => route('sucursal.create')
         ]);
     }
 
@@ -57,36 +57,35 @@ class VentaDataTable extends DataTable implements FromView, ShouldAutoSize, With
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', function ($venta) {
+            ->addColumn('action', function ($sucursal) {
                 return
-                    '<a role="button" href="'.route('venta.edit', [$venta->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
-                    <a role="button" href="'.route('venta.show', [$venta->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
-            })
-            ->addColumn('estado', function ($venta) {
-                return "<a class='badge btn-change-status ".(($venta->estado == 'Activo') ? "badge-success" : "badge-warning")."' data-item-id='".$venta->id."' data-item-name='".$venta->nombre."' data-item-status='".$venta->estado."' href='#'>$venta->estado</a>";
+                    '<a role="button" href="'.route('sucursal.edit', [$sucursal->id]).'" class="btn btn-sm btn-outline-info" data-toggle="tooltip" data-animation="true" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
+                    <a role="button" href="'.route('sucursal.show', [$sucursal->id]).'" class="btn btn-sm btn-outline-danger" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver"><i class="fas fa-eye"></i></a>';
             })
 
-            ->addColumn('cliente_id', function (User $user) {
+            ->addColumn('municipio', function (Municipio $municipio) {
+                return '<a class="badge badge-info" href="'.route('municipio.show', [$municipio->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$municipio->nombre.'</a>';
+            })
+
+            ->addColumn('jefe_id', function (User $user) {
                 return '<a class="badge badge-info" href="'.route('user.show', [$user->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$user->nombre.'</a>';
             })
-            ->addColumn('vendedor_id', function (User $user) {
-                return '<a class="badge badge-info" href="'.route('user.show', [$user->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$user->nombre.'</a>';
+
+            ->addColumn('empresa', function (Empresa $empresa) {
+                return '<a class="badge badge-info" href="'.route('empresa.show', [$empresa->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$empresa->nombre.'</a>';
             })
 
-            ->addColumn('sucursal_id', function (Sucursal $sucursal) {
-                return '<a class="badge badge-info" href="'.route('sucursal.show', [$sucursal->id]).'" data-toggle="tooltip" data-animation="true" data-placement="top" title="Ver">'.$$sucursal->nombre.'</a>';
-            })
 
-            ->rawColumns(['action','cliente_id','vendedor_id','sucursal_id']);
+            ->rawColumns(['action','municipio','jefe_id', 'estado']);
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param  Venta  $model
+     * @param  Sucursal  $model
      * @return Builder
      */
-    public function query(Venta $model)
+    public function query(Sucursal $model)
     {
         if($this->queryBuilder != null){
             return $this->queryBuilder;
@@ -126,27 +125,22 @@ class VentaDataTable extends DataTable implements FromView, ShouldAutoSize, With
             Column::make('id')
                 ->title('#')
                 ->addClass('d-none d-md-table-cell text-center'),
-
-            Column::make('fecha')->addClass('text-break'),
-            Column::make('valor_total')->addClass('text-break'),
-            Column::computed('cliente_id')
-                ->addClass('text-center')->name('user.nombre')
-                ->title('user')->searchable(true)
+            Column::make('nombre')->addClass('text-break'),
+            Column::computed('municipio')
+                ->addClass('text-center')->name('municipio.nombre')
+                ->title('Municipio')->searchable(true)
                 ->orderable(true)->printable(true)
                 ->exportable(true)->render(null),
-
-            Column::computed('vendedor_id')
-                ->addClass('text-center')->name('user.nombre')
-                ->title('user')->searchable(true)
+            Column::make('direccion')->addClass('text-break'),
+            Column::make('telefono')->addClass('text-break'),
+            Column::computed('jefe_id')
+                ->addClass('text-center')->name('jefe_id.nombre')
+                ->title('Jefe')->searchable(true)
                 ->orderable(true)->printable(true)
                 ->exportable(true)->render(null),
-            Column::computed('sucursal_id')
-                ->addClass('text-center')->name('sucursal.nombre')
-                ->title('sucursal')->searchable(true)
-                ->orderable(true)->printable(true)
-                ->exportable(true)->render(null),
-            Column::computed('forma_pago')->addClass('text-break text-center d-md-table-cell')
-                ->name('forma_pago')->searchable(true)
+            Column::computed('empresa_id')
+                ->addClass('text-center')->name('empresa_id.nombre')
+                ->title('Empresa')->searchable(true)
                 ->orderable(true)->printable(true)
                 ->exportable(true)->render(null),
             Column::computed('estado')->addClass('text-break text-center d-md-table-cell')
@@ -168,7 +162,7 @@ class VentaDataTable extends DataTable implements FromView, ShouldAutoSize, With
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new VentaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
+        return Excel::download(new SucursalDataTable(), $this->getFilename() . $ext, $this->excelWriter);
     }
 
     /**

@@ -138,7 +138,7 @@ class CategoriaDataTable extends DataTable implements FromView, ShouldAutoSize, 
     public function excel()
     {
         $ext = '.' . strtolower($this->excelWriter);
-        return Excel::download(new EmpresaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
+        return Excel::download(new CategoriaDataTable(), $this->getFilename() . $ext, $this->excelWriter);
     }
 
     /**

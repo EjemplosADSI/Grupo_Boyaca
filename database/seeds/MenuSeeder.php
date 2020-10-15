@@ -19,11 +19,14 @@ class MenuSeeder extends Seeder
                 'id' => $record['id'],
                 'parent_id' => ($record['parent_id'] == 'NULL') ? NULL : $record['parent_id'],
                 'title' => $record['title'],
+                'label' => $record['label'],
+                'label_color' => $record['label_color'],
                 'description' => $record['description'],
                 'model' => $record['model'],
                 'route' => $record['route'],
                 'order' => $record['order'],
                 'icon' => $record['icon'],
+                'icon_color' => $record['icon_color'],
                 'enabled' => $record['enabled'],
             ]);
         }
