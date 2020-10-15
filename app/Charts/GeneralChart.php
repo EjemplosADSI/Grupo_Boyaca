@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Charts;
+
+use ConsoleTVs\Charts\Classes\Chartjs\Chart;
+
+class GeneralChart extends Chart
+{
+    /**
+     * Initializes the chart.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->options([
+            'tooltip' => [
+                'show' => true // or false, depending on what you want.
+            ]
+        ]);
+    }
+}

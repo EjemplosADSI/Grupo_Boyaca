@@ -16,7 +16,7 @@ class CreateMunicipioTable extends Migration
     {
         Schema::create('municipios', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre')->unique()->index();
+            $table->string('nombre')->index();
             $table->unsignedBigInteger('departamento_id')->index(); //llave foranea
             $table->string('acortado', 40)->nullable();
             $table->enum('estado', BasicStatus::getValues())->default(BasicStatus::Activo);
