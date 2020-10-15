@@ -12,6 +12,6 @@ $factory->define(Departamento::class, function (Faker $faker) {
         'id' => $faker->unique()->numberBetween(1,500),
         'nombre' => $faker->unique()->state,
         'region' => $faker->randomElement(DepartamentoRegion::getValues()),
-        'estado' => $faker->randomElement(BasicStatus::getValues()),
+        'estado' => $faker->randomElement(BasicStatus::getValues())
     ];
 });

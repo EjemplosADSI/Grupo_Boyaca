@@ -14,6 +14,6 @@ $factory->define(Menu::class, function (Faker $faker) {
         'description' => $faker->sentence($nbWords = 6, $variableNbWords = true),
         'order' => $faker->randomDigit,
         'icon' => $faker->word,
-        'enabled' => $faker->numberBetween($min = 0, $max = 1),
+        'enabled' => $faker->numberBetween($min = 0, $max = 1)
     ];
 });
